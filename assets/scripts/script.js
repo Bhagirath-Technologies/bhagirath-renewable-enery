@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // dimensions: '1.5 meters by 1 meter',
             // power: '300 watts of power under optimal sunlight conditions',
             // warranty: '25-year performance warranty and a 10-year product warranty',
-            image: './assets/img/our products/our-product-1-alt.webp'
+            image: './assets/img/our products/temporary-product-image.webp'
         },
         'polycrystalline-tab': {
             title: 'Polycrystalline Solar Cell Panels',
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // dimensions: '1.4 meters by 0.9 meters',
             // power: '280 watts of power under optimal sunlight conditions',
             // warranty: '20-year performance warranty and a 10-year product warranty',
-            image: './assets/img/our products/our-product-1-alt.webp'
+            image: './assets/img/our products/temporary-product-image-2.webp'
         }
     };
 
