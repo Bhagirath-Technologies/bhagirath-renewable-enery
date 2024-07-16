@@ -1567,6 +1567,10 @@
     font-weight: 700;
 }
 
+.social-icon {
+    text-decoration: none;
+}
+
 .nav-item {
     /* display: flex; */
     justify-content: center;
