@@ -23,7 +23,7 @@
 .about-us-hero-content {
     position: absolute;
     top: 50%;
-    left: 20px;
+    left: 40px;
     /* Adjust as needed for left spacing */
     transform: translateY(-50%);
     color: white;
@@ -43,6 +43,21 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.dark-overlay-70 {
+    position: relative;
+}
+
+.dark-overlay-70::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
@@ -279,9 +294,21 @@
     color: var(--secondary-color);
 }
 
-
-
 /* OUR PRODUCTS SECTION */
+
+.our-products-read-more-btn {
+    border-radius: 0%;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: transparent;
+    border: 1.6px solid var(--white);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.our-products-read-more-btn:hover {
+    color: var(--black);
+    background-color: var(--white);
+}
 
 .our-products-section {
     position: relative;
@@ -415,10 +442,15 @@
     background-color: var(--light-blue);
 }
 
-/* .business-partners-container {
-    max-width: 600px;
-    margin: 0 auto;
-} */
+.business-partners-container {
+    min-height: 27rem;
+}
+
+@media (max-width: 768px) {
+    .business-partners-container {
+        min-height: 30rem;
+    }   
+}
 
 /* 
 .business-partner-image-container {

@@ -1,0 +1,138 @@
+:root {
+    /* MONOCHROMATIC BLUES THEME */
+    --primary-color: #023E8A;
+    --secondary-color: #0077B6;
+    --light-color: #CAF0F8;
+    --mid-dark-color: #0b131f;
+    --high-dark-color: #080e16;
+    --logo-color-primary: #0e3f61;
+    --logo-color-secondary: #9b9d68;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+/* HERO SECTION */
+
+.contact-us-hero-section {
+    position: relative;
+    height: 280px;
+    background-image: url('../img/contact page images/contact-page-hero-img-1.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-us-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 2;
+}
+
+.dark-overlay-50 {
+    position: relative;
+}
+
+.dark-overlay-50::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.breadcrumb {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.breadcrumb-item {
+    display: inline-block;
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+    color: var(--light-color);
+}
+
+.breadcrumb-item.active {
+    color: var(--white);
+}
+
+.breadcrumb-separator {
+    color: var(--white);
+    margin: 0 5px;
+}
+
+/* MAIN SECTION */
+
+.contact-us-main-section {
+    /* background-color: var(--primary-color); */
+    background-color: var(--white);
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin: 14px 0px 14px 0px;
+    box-sizing: border-box;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        margin: 12px 0px 12px 0px ;
+    }
+}
+
+.contact-details-comp-1 {
+    display: flex;
+    align-items: center;
+}
+
+.contact-details-comp-1-icon {
+    /* color: var(--white); */
+    color: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.contact-details-comp-1-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details-comp-1-label {
+    /* color: var(--white); */
+    color: var(--primary-color);
+    font-size: 1.6rem;
+}
+
+.contact-details-comp-1-text {
+    /* color: var(--white); */
+    color: var(--black);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+/* .contact-details-comp-1-text:hover {
+    color: var(--light-color);
+} */

@@ -24,7 +24,7 @@
 .services-hero-content {
     position: absolute;
     top: 50%;
-    left: 20px;
+    left: 40px;
     transform: translateY(-50%);
     color: white;
     z-index: 2;
@@ -83,6 +83,10 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: 40px 0;
+}
+
+.timeline-text {
+    text-align: justify;
 }
 
 .timeline-item {
