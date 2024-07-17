@@ -2062,7 +2062,7 @@
 
 /* OUR SERVICES */
 
-.green-heading {
+.colored-heading {
     color: var(--secondary-color);
 }
 
@@ -2908,4 +2908,8 @@
 
 .light-color-heading {
     color: var(--light-color);
+}
+
+.justified-text {
+    text-align: justify;
 }
