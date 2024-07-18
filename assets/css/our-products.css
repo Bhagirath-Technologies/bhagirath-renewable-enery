@@ -95,6 +95,12 @@
     z-index: 2;
 }
 
+@media (max-width: 768px) {
+    .section-4-content {
+        left: 20px;
+    }
+}
+
 /* SECTION 5 */
 
 .section-5 {
@@ -112,4 +118,10 @@
     transform: translateY(-50%);
     color: white;
     z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .section-5-content {
+        left: 20px;
+    }
 }
