@@ -42,7 +42,6 @@
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar1"
                 aria-labelledby="offcanvasNavbarLabel1">
                 <div class="offcanvas-header">
-                    <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">BREL</h5> -->
                     <span class="offcanvas-title" id="offcanvasNavbarLabel">
                         <a class="navbar-brand main-logo" href="./index.html">
                             <img src="./assets/img/logos/Catalog BREL LOGO.webp" alt="BREL" width="160px">
@@ -72,9 +71,6 @@
                         </li>
                         <li class="nav-item">
                             <div class="nav-comp-2-icon-container p-2">
-                                <!-- <i class="bi bi-facebook"></i> -->
-                                <!-- <i class="bi bi-twitter-x"></i> -->
-                                <!-- <i class="bi bi-instagram"></i> -->
                                 <a class="social-icon"
                                     href="https://www.facebook.com/people/Bhagirath-Renewable-Energy/61562407499328/?mibextid=ZbWKwL"
                                     target="_blank" rel="noopener noreferrer">
@@ -107,7 +103,8 @@
                 onclick="window.open('https://brelindia.com/assets/img/bg-images/home/Brouchers/BREL%20Brochure.pdf', '_blank')">
                 Get Brochure
             </button> -->
-            <button class="btn get-a-quote-btn get-a-quote-btn-1 p-2">
+            <button class="btn get-a-quote-btn get-a-quote-btn-1 p-2" data-bs-toggle="modal"
+                data-bs-target="#quoteModal">
                 Get a Quote
             </button>
 
@@ -140,45 +137,26 @@
                             <a class="nav-link white-text hover-light-blue p-3" href="./services.html">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link white-text hover-light-blue p-3" href="./our-products.html">Our Products</a>
+                            <a class="nav-link white-text hover-light-blue p-3" href="./our-products.html">Our
+                                Products</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle white-text hover-light-blue p-3" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Brel Resco
                             </a>
-                            <!-- <ul class="dropdown-menu dropdown-2 pr-5">
-                                <li><a class="dropdown-item white-text hover-light-blue blue-bg" href="#">Renewable Energy
-                                        Service</a>
-                                </li>
-                                <li><a class="dropdown-item white-text hover-light-blue blue-bg" href="#">Brel Resco
-                                        Cashflow</a>
-                                </li>
-                            </ul> -->
                             <ul class="dropdown-menu dropdown-2">
-                                <li><a class="dropdown-item hover-light-blue special-dropdown-color" href="./brel-resco-1.html">Renewable
+                                <li><a class="dropdown-item hover-light-blue special-dropdown-color"
+                                        href="./brel-resco-1.html">Renewable
                                         Energy
                                         Service</a>
                                 </li>
-                                <li><a class="dropdown-item hover-light-blue special-dropdown-color" href="./brel-resco-2.html">Brel Resco
+                                <li><a class="dropdown-item hover-light-blue special-dropdown-color"
+                                        href="./brel-resco-2.html">Brel Resco
                                         Cashflow</a>
                                 </li>
                             </ul>
                         </li>
-
-
-                        <!-- CUSTOM DROPDOWN NEW -->
-                        <!-- <li class="nav-item">
-                                <select name="Brel Resco" class="nav-link white-text hover-light-blue p-3 special-select">
-                                    <option value="" disabled selected class="special-option special-option-hidden">Brel Resco</option>
-                                    <option value="Renewable Energy Service" class="special-option">
-                                        <a href="#">Renewable Energy Service</a>
-                                    </option>
-                                    <option value="Brel Resco Cashflow" class="special-option">
-                                        <a href="#">Brel Resco Cashflow</a>
-                                    </option>
-                                </select>
-                        </li> -->
 
                         <li class="nav-item">
                             <a class="nav-link white-text hover-light-blue p-3" href="./contact.html">Contact Us</a>
@@ -196,68 +174,123 @@
                 onclick="window.open('https://brelindia.com/assets/img/bg-images/home/Brouchers/BREL%20Brochure.pdf', '_blank')">
                 Get Brochure
             </button> -->
-            <button class="btn get-a-quote-btn get-a-quote-btn-2 p-2">
+
+            <button class="btn get-a-quote-btn get-a-quote-btn-2 p-2" data-bs-toggle="modal"
+                data-bs-target="#quoteModal">
                 Get a Quote
             </button>
+
+            <!-- MODAL -->
+            <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title h4 colored-heading" id="quoteModalLabel">Get a Quote</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="custom-form-2 row g-3">
+                                <div class="col-md-6">
+                                    <label for="inputName" class="form-label">Full Name <span
+                                            class="required-asterisk">*</span></label>
+                                    <input type="text" class="form-control" id="inputName" placeholder="Full name"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputNumber" class="form-label">Phone Number <span
+                                            class="required-asterisk">*</span></label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inputNumber"
+                                            placeholder="Phone number" required>
+                                        <span class="input-group-text">
+                                            <img src="./assets/img/home page images/indian-flag.webp" alt="Indian Flag"
+                                                class="flag-icon">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="inputEmail4" class="form-label">Email Address <span
+                                            class="required-asterisk">*</span></label>
+                                    <input type="email" class="form-control" id="inputEmail4"
+                                        placeholder="Email address" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="inputState" class="form-label">State <span
+                                            class="required-asterisk">*</span></label>
+                                    <select id="inputState" class="form-select" required>
+                                        <option selected disabled>Choose...</option>
+                                        <option>Andhra Pradesh</option>
+                                        <option>Arunachal Pradesh</option>
+                                        <option>Assam</option>
+                                        <option>Bihar</option>
+                                        <option>Chhattisgarh</option>
+                                        <option>Goa</option>
+                                        <option>Gujarat</option>
+                                        <option>Haryana</option>
+                                        <option>Himachal Pradesh</option>
+                                        <option>Jharkhand</option>
+                                        <option>Karnataka</option>
+                                        <option>Kerala</option>
+                                        <option>Madhya Pradesh</option>
+                                        <option>Maharashtra</option>
+                                        <option>Manipur</option>
+                                        <option>Meghalaya</option>
+                                        <option>Mizoram</option>
+                                        <option>Nagaland</option>
+                                        <option>Odisha</option>
+                                        <option>Punjab</option>
+                                        <option>Rajasthan</option>
+                                        <option>Sikkim</option>
+                                        <option>Tamil Nadu</option>
+                                        <option>Telangana</option>
+                                        <option>Tripura</option>
+                                        <option>Uttar Pradesh</option>
+                                        <option>Uttarakhand</option>
+                                        <option>West Bengal</option>
+                                        <option>Andaman and Nicobar Islands</option>
+                                        <option>Chandigarh</option>
+                                        <option>Dadra and Nagar Haveli and Daman and Diu</option>
+                                        <option>Lakshadweep</option>
+                                        <option>Delhi (National Capital Territory of Delhi)</option>
+                                        <option>Puducherry</option>
+                                        <option>Jammu and Kashmir</option>
+                                        <option>Ladakh</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="inputHomeCommercial" class="form-label">Solar For Home or Commercial?
+                                        <span class="required-asterisk">*</span></label>
+                                    <select id="inputHomeCommercial" class="form-select" required>
+                                        <option selected disabled>Choose...</option>
+                                        <option>Individual House or Villa</option>
+                                        <option>Flat or Apartment</option>
+                                        <option>Commercial</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="inputStateBill" class="form-label">Monthly Average Electricity Bill
+                                        <span class="required-asterisk">*</span></label>
+                                    <select id="inputStateBill" class="form-select" required>
+                                        <option selected disabled>Choose...</option>
+                                        <option>Less than ₹1000</option>
+                                        <option>₹1000 to ₹2000</option>
+                                        <option>₹2000 to ₹5000</option>
+                                        <option>More Than ₹5000</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary form-submit-btn-2 mt-2">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <!-- <nav class="navbar navbar-2 navbar-expand-lg p-0">
-        <div class="container-fluid container-fluid-2">
-            <button class="navbar-toggler navbar-toggler-2" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
-                <span class="material-symbols-outlined toggler-icon-2">
-                    apps
-                </span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2"
-                aria-labelledby="offcanvasNavbarLabel2">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav navbar-nav-2 justify-content-start flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link white-text hover-light-blue p-3" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link white-text hover-light-blue p-3" href="#">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link white-text hover-light-blue p-3" href="#">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link white-text hover-light-blue p-3" href="#">Our Products</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle white-text hover-light-blue p-3" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Brel Resco
-                            </a>
-                            <ul class="dropdown-menu dropdown-2">
-                                <li><a class="dropdown-item white-text hover-light-blue blue-bg" href="#">Renewable Energy
-                                        Service</a></li>
-                                <li><a class="dropdown-item white-text hover-light-blue blue-bg" href="#">Brel Resco
-                                        Cashflow</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link white-text hover-light-blue p-3" href="#">Contact Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link white-text hover-light-blue p-3" href="#">Solar Calculator</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <button class="btn get-brochure-btn p-3">Get Brochure</button>
-        </div>
-    </nav> -->
-
-    <!-- CAROUSEL -->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <!-- OLD CAROUSEL -->
+    <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
@@ -268,31 +301,14 @@
             <div class="carousel-item carousel-dark-overlay active">
                 <img src="./assets/img/home page images/img-1-low-quality.webp" class="d-block w-100" alt="Windmill">
                 <div class="carousel-caption">
-                    <!-- <div class="carousel-caption d-none d-md-block"> -->
                     <h6 class="text-start text-animation h6">| ENERGY TOMORROW</h6>
                     <h1 class="text-start heading-1 text-animation">Powered</h1>
                     <h1 class="text-start heading-2 text-animation">INNOVATION</h1>
-                    <!-- <p class="text-start text-animation">
-                        Power your future sustainably with our cutting-edge solar solutions,
-                        <br>
-                        harnessing the sun's energy for a brighter tomorrow.
-                    </p> -->
-                    <!-- <p class="text-start text-animation">
-                        Harness the boundless potential of solar energy with our innovative solutions,
-                        <br>
-                        paving the way for a sustainable future filled with brighter possibilities.
-                        <br>
-                        Our cutting-edge technology transforms sunlight into efficient sources,
-                        <br>
-                        ensuring reliability.
-                    </p> -->
-
                     <p class="text-start text-animation">
                         Harness the boundless potential of solar energy with our innovative solutions, paving the way
                         for a sustainable future filled with brighter possibilities. Our cutting-edge technology
                         transforms sunlight into efficient sources, ensuring reliability.
                     </p>
-
                     <div class="d-flex justify-content-start">
                         <button type="button" class="btn btn-success custom-button btn-md">DISCOVER MORE</button>
                     </div>
@@ -305,23 +321,11 @@
                     <h6 class="text-start h6">| ENERGY TOMORROW</h6>
                     <h1 class="text-start heading-1">Sustainable</h1>
                     <h1 class="text-start heading-2">SUNLIGHT</h1>
-
-                    <!-- <p class="text-start text-animation">
-                        Experience energy independence with our innovative solar technologies,
-                        <br>
-                        paving the way towards a greener, more sustainable future.
-                        <br>
-                        Embrace renewable energy solutions that not only reduce carbon footprints
-                        <br>
-                        but also enhance energy independence.
-                    </p> -->
-
                     <p class="text-start text-animation">
                         Experience energy independence with our innovative solar technologies, paving the way towards a
                         greener, more sustainable future. Embrace renewable energy solutions that not only reduce carbon
                         footprints but also enhance energy independence.
                     </p>
-
                     <div class="d-flex justify-content-start">
                         <button type="button" class="btn btn-success custom-button btn-md">DISCOVER MORE</button>
                     </div>
@@ -338,6 +342,304 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+    </div> -->
+
+    <!-- NEW CAROUSEL -->
+    <div id="carouselContainer" style="position: relative;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item carousel-item-special carousel-gradient-overlay active"
+                    data-bs-interval="2000">
+                    <img src="./assets/img/home page images/carousel images/img-a.webp" class="d-block w-100"
+                        alt="Slide 1">
+                    <div class="carousel-text-container text-center">
+                        <h4 class="h4">MANUFACTURING EXCELLENCE</h4>
+                        <h2 class="h2 white-text">BATTERY ENERGY STORAGE SYSTEMS</h2>
+                        <p class="light-text white-text">Harness the boundless potential of solar energy with our
+                            innovative solutions, paving the way for a sustainable future filled with brighter
+                            possibilities.</p>
+                    </div>
+                    <div class="carousel-icon-container-wrapper">
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    solar_power
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Module and Cells</div>
+                        </div>
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    sunny
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">4GW</div>
+                            <div class="carousel-icon-container-text">Module Exports</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-item-special carousel-gradient-overlay" data-bs-interval="2000">
+                    <img src="./assets/img/home page images/carousel images/img-b.webp" class="d-block w-100"
+                        alt="Slide 2">
+                    <div class="carousel-text-container text-center">
+                        <h4 class="h4">MANUFACTURING EXCELLENCE</h4>
+                        <h2 class="h2 white-text">BATTERY ENERGY STORAGE SYSTEMS</h2>
+                        <p class="light-text white-text">Harness the boundless potential of solar energy with our
+                            innovative solutions, paving the way for a sustainable future filled with brighter
+                            possibilities.</p>
+                    </div>
+                    <div class="carousel-icon-container-wrapper">
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    solar_power
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Solar Plant, Gujarat</div>
+                        </div>
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    sunny
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Solar Plant, Gujarat</div>
+                        </div>
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    solar_power
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Solar Plant, Gujarat</div>
+                        </div>
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    sunny
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Solar Plant, Gujarat</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-item-special carousel-gradient-overlay" data-bs-interval="2000">
+                    <img src="./assets/img/home page images/carousel images/img-c.webp" class="d-block w-100"
+                        alt="Slide 3">
+                    <div class="carousel-text-container text-center">
+                        <h4 class="h4">MANUFACTURING EXCELLENCE</h4>
+                        <h2 class="h2 white-text">BATTERY ENERGY STORAGE SYSTEMS</h2>
+                        <p class="light-text white-text">Harness the boundless potential of solar energy with our
+                            innovative solutions, paving the way for a sustainable future filled with brighter
+                            possibilities.</p>
+                    </div>
+                    <div class="carousel-icon-container-wrapper">
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    solar_power
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Solar Plant, Gujarat</div>
+                        </div>
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    sunny
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Solar Plant, Gujarat</div>
+                        </div>
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    solar_power
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Solar Plant, Gujarat</div>
+                        </div>
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    sunny
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Solar Plant, Gujarat</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-item-special carousel-gradient-overlay" data-bs-interval="2000">
+                    <img src="./assets/img/home page images/carousel images/img-d.webp" class="d-block w-100"
+                        alt="Slide 4">
+                    <div class="carousel-text-container text-center">
+                        <h4 class="h4">MANUFACTURING EXCELLENCE</h4>
+                        <h2 class="h2 white-text">BATTERY ENERGY STORAGE SYSTEMS</h2>
+                        <p class="light-text white-text">Harness the boundless potential of solar energy with our
+                            innovative solutions, paving the way for a sustainable future filled with brighter
+                            possibilities.</p>
+                    </div>
+                    <div class="carousel-icon-container-wrapper">
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    solar_power
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Solar Plant, Gujarat</div>
+                        </div>
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    sunny
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Solar Plant, Gujarat</div>
+                        </div>
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    solar_power
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Solar Plant, Gujarat</div>
+                        </div>
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    sunny
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Solar Plant, Gujarat</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-item-special carousel-gradient-overlay" data-bs-interval="2000">
+                    <img src="./assets/img/home page images/carousel images/img-e.webp" class="d-block w-100"
+                        alt="Slide 5">
+                    <div class="carousel-text-container text-center">
+                        <h4 class="h4">MANUFACTURING EXCELLENCE</h4>
+                        <h2 class="h2 white-text">BATTERY ENERGY STORAGE SYSTEMS</h2>
+                        <p class="light-text white-text">Harness the boundless potential of solar energy with our
+                            innovative solutions, paving the way for a sustainable future filled with brighter
+                            possibilities.</p>
+                    </div>
+                    <div class="carousel-icon-container-wrapper">
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    solar_power
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Solar Plant, Gujarat</div>
+                        </div>
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    sunny
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Solar Plant, Gujarat</div>
+                        </div>
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    solar_power
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Solar Plant, Gujarat</div>
+                        </div>
+                        <div class="carousel-icon-container">
+                            <div class="carousel-icon-container-icon">
+                                <span class="material-symbols-outlined">
+                                    sunny
+                                </span>
+                            </div>
+                            <div class="carousel-icon-container-heading">300 MW</div>
+                            <div class="carousel-icon-container-text">Solar Plant, Gujarat</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEFT/RIGHT BUTTONS -->
+            <button class="carousel-control-prev smaller-screen-buttons" type="button"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next smaller-screen-buttons" type="button"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div id="carousel-list-div">
+            <div class="carousel-list-item-container d-flex align-items-center justify-content-start ps-3 active"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1">
+                <span class="material-symbols-outlined bigger-icons">
+                    sunny
+                </span>
+                Harnessing Sunshine
+            </div>
+            <div class="carousel-list-item-container d-flex align-items-center justify-content-start ps-3"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2">
+                <span class="material-symbols-outlined bigger-icons">
+                    home
+                </span>
+                Empowering Homes
+            </div>
+            <div class="carousel-list-item-container d-flex align-items-center justify-content-start ps-3"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3">
+                <span class="material-symbols-outlined bigger-icons">
+                    solar_power
+                </span>
+                Solar Solutions
+            </div>
+            <div class="carousel-list-item-container d-flex align-items-center justify-content-start ps-3"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4">
+                <span class="material-symbols-outlined bigger-icons">
+                    sunny
+                </span>
+                Harnessing Sunshine
+            </div>
+            <div class="carousel-list-item-container d-flex align-items-center justify-content-start ps-3"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5">
+                <span class="material-symbols-outlined bigger-icons">
+                    home
+                </span>
+                Empowering Homes
+            </div>
+        </div>
     </div>
 
     <!-- OUR SERVICES -->
@@ -412,9 +714,9 @@
     <!-- FORM -->
     <div class="row no-gutters form-container pt-5 pt-xxl-7 pb-5 pb-xxl-7 px-2">
         <div class="col-md-6 d-flex flex-column align-items-center">
-            <h4 class="d-flex justify-content-center text-secondary-color-1 text-animation h4">| Schedule a Free
-                Consultation</h4>
+            <h4 class="d-flex justify-content-center text-secondary-color-1 text-animation h4">| Get in Touch</h4>
             <h1 class="d-flex justify-content-center text-white text-animation h1">Get Started</h1>
+
             <form class="custom-form text-white row g-3 mt-4 mb-4">
                 <div class="col-md-6">
                     <label for="inputName" class="form-label">Full Name</label>
@@ -429,33 +731,70 @@
                     <input type="email" class="form-control" id="inputEmail4">
                 </div>
                 <div class="col-md-12">
-                    <label for="inputStateBill" class="form-label">Monthly Electricity Bill</label>
-                    <select id="inputStateBill" class="form-select">
-                        <option selected>Choose...</option>
-                        <option>Less Than ₹2000</option>
-                        <option>₹2000 to ₹5000</option>
-                        <option>₹5000 to ₹8000</option>
-                        <option>More Than ₹8000</option>
-                    </select>
-                </div>
-                <div class="col-12">
-                    <label for="inputAddress" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputCity" class="form-label">City</label>
-                    <input type="text" class="form-control" id="inputCity">
-                </div>
-                <div class="col-md-4">
                     <label for="inputState" class="form-label">State</label>
                     <select id="inputState" class="form-select">
                         <option selected>Choose...</option>
-                        <option>...</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh</option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                        <option>Chhattisgarh</option>
+                        <option>Goa</option>
+                        <option>Gujarat</option>
+                        <option>Haryana</option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Maharashtra</option>
+                        <option>Manipur</option>
+                        <option>Meghalaya</option>
+                        <option>Mizoram</option>
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
+                        <option>Punjab</option>
+                        <option>Rajasthan</option>
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu</option>
+                        <option>Telangana</option>
+                        <option>Tripura</option>
+                        <option>Uttar Pradesh</option>
+                        <option>Uttarakhand</option>
+                        <option>West Bengal</option>
+                        <option>Andaman and Nicobar Islands</option>
+                        <option>Chandigarh</option>
+                        <option>Dadra and Nagar Haveli and Daman and Diu</option>
+                        <option>Lakshadweep</option>
+                        <option>Delhi (National Capital Territory of Delhi)</option>
+                        <option>Puducherry</option>
+                        <option>Jammu and Kashmir</option>
+                        <option>Ladakh</option>
                     </select>
                 </div>
-                <div class="col-md-2">
-                    <label for="inputZip" class="form-label">Zip</label>
-                    <input type="text" class="form-control" id="inputZip">
+                <div class="col-md-12">
+                    <label for="inputHomeCommercial" class="form-label">Solar For Home or Commercial?</label>
+                    <select id="inputHomeCommercial" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>Individual House or Villa</option>
+                        <option>Flat or Apartment</option>
+                        <option>Commercial</option>
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <label for="inputStateBill" class="form-label">Monthly Average Electricity Bill</label>
+                    <select id="inputStateBill" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>Less than ₹1000</option>
+                        <option>₹1000 to ₹2000</option>
+                        <option>₹2000 to ₹5000</option>
+                        <option>More Than ₹5000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"
+                        required></textarea>
                 </div>
                 <div class="col-12">
                     <div class="form-check">
@@ -473,70 +812,9 @@
         <div class="col-md-6">
             <div class="form-img">
                 <img src="./assets/img/home page images/form/form-img-2.webp" alt="Form Image">
-                <!-- <p>img</p> -->
             </div>
         </div>
     </div>
-
-    <!-- <div class="form-container pt-5 pt-xxl-7 pb-5 pb-xxl-7 px-2 d-flex flex-column align-items-center">
-        <h4 class="d-flex justify-content-center text-secondary-color-1 text-animation h4">| Schedule a Free
-            Consultation</h4>
-        <h1 class="d-flex justify-content-center text-white text-animation h1">Get Started</h1>
-        <form class="custom-form text-white row g-3 mt-4 mb-4">
-            <div class="col-md-6">
-                <label for="inputName" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="inputName">
-            </div>
-            <div class="col-md-6">
-                <label for="inputNumber" class="form-label">Phone Number</label>
-                <input type="number" class="form-control" id="inputNumber">
-            </div>
-            <div class="col-md-12">
-                <label for="inputEmail4" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="inputEmail4">
-            </div>
-            <div class="col-md-12">
-                <label for="inputStateBill" class="form-label">Monthly Electricity Bill</label>
-                <select id="inputStateBill" class="form-select">
-                    <option selected>Choose...</option>
-                    <option>Less Than ₹2000</option>
-                    <option>₹2000 to ₹5000</option>
-                    <option>₹5000 to ₹8000</option>
-                    <option>More Than ₹8000</option>
-                </select>
-            </div>
-            <div class="col-12">
-                <label for="inputAddress" class="form-label">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-            </div>
-            <div class="col-md-6">
-                <label for="inputCity" class="form-label">City</label>
-                <input type="text" class="form-control" id="inputCity">
-            </div>
-            <div class="col-md-4">
-                <label for="inputState" class="form-label">State</label>
-                <select id="inputState" class="form-select">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                </select>
-            </div>
-            <div class="col-md-2">
-                <label for="inputZip" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="inputZip">
-            </div>
-            <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                        I agree with BREL's <a href="#">Terms of Service</a>
-                    </label>
-                </div>
-            </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary form-submit-btn">Submit</button>
-            </div>
-        </form>
-    </div> -->
 
     <!-- STATS -->
     <div class="row stats-container">
@@ -574,62 +852,11 @@
         </div>
     </div>
 
-
-    <!-- <div class="stats-container">
-        <div class="stats-item">
-            <span class="counters">
-                <span class="stats-number counter" data-count="120">0</span>
-            </span>
-            <span class="stats-unit">+</span>
-            <br>
-            <span class="stats-label">Project Success</span>
-        </div>
-        <div class="stats-item">
-            <span class="counters">
-                <span class="stats-number counter" data-count="50">0</span>
-            </span>
-            <span class="stats-unit">+</span>
-            <br>
-            <span class="stats-label">Client Reviews</span>
-        </div>
-        <div class="stats-item">
-            <span class="counters">
-                <span class="stats-number counter" data-count="100">0</span>
-            </span>
-            <span class="stats-unit">+</span>
-            <br>
-            <span class="stats-label">Team Members</span>
-        </div>
-        <div class="stats-item">
-            <span class="counters">
-                <span class="stats-number counter" data-count="75">0</span>
-            </span>
-            <span class="stats-unit">+</span>
-            <br>
-            <span class="stats-label">Awards</span>
-        </div>
-    </div> -->
-
     <!-- GALLERY -->
     <div class="gallery pt-5 pt-xxl-7">
         <h4 class="d-flex justify-content-center colored-heading text-animation h4">| Gallery</h4>
         <h1 class="d-flex justify-content-center text-animation h1">Solar Project Gallery</h1>
         <div class="gallery-container">
-
-            <!-- <div class="gallery-item">
-                <img src="https://cdn.pixabay.com/photo/2017/09/29/18/18/photovoltaic-2799982_1280.jpg" alt="Image 1">
-            </div>
-            <div class="gallery-item">
-                <img src="https://cdn.pixabay.com/photo/2014/01/26/17/08/wind-energy-252355_1280.jpg" alt="Image 2">
-            </div>
-            <div class="gallery-item">
-                <img src="https://cdn.pixabay.com/photo/2017/09/12/13/22/photovoltaic-system-2742304_1280.jpg"
-                    alt="Image 3">
-            </div>
-            <div class="gallery-item">
-                <img src="https://cdn.pixabay.com/photo/2019/10/15/06/03/windmill-4550711_1280.jpg" alt="Image 4">
-            </div> -->
-
             <div class="gallery-item">
                 <img src="./assets/img/gallery images/gallery-img-1.webp" alt="Image 1">
             </div>
@@ -644,41 +871,6 @@
             </div>
         </div>
     </div>
-
-    <!-- SLIDER -->
-    <!-- <div class="container pt-5 mb-5">
-        <h4 class="d-flex justify-content-center colored-heading text-animation h4">| Business Partners</h4>
-        <h1 class="d-flex justify-content-center text-animation h1">Our Valued Partners</h1>
-        <div class="slider-container">
-            <div class="slider-content">
-                <span>
-                    <img class="business-partners-logo" src="./assets/img/business-partner-1.png" alt="">
-                </span>
-                <span>
-                    <img class="business-partners-logo" src="./assets/img/business-partner-2.png" alt="">
-                </span>
-                <span>
-                    <img class="business-partners-logo" src="./assets/img/business-partner-3.png" alt="">
-                </span>
-                <span>
-                    <img class="business-partners-logo" src="./assets/img/business-partner-4.png" alt="">
-                </span> -->
-    <!-- Repeat the logos to create a seamless effect -->
-    <!-- <span>
-                    <img class="business-partners-logo" src="./assets/img/business-partner-1.png" alt="">
-                </span>
-                <span>
-                    <img class="business-partners-logo" src="./assets/img/business-partner-2.png" alt="">
-                </span>
-                <span>
-                    <img class="business-partners-logo" src="./assets/img/business-partner-3.png" alt="">
-                </span>
-                <span>
-                    <img class="business-partners-logo" src="./assets/img/business-partner-4.png" alt="">
-                </span>
-            </div>
-        </div>
-    </div> -->
 
     <!-- BUSINESS PARTNERS // ADD THE CLASS "container" BELOW IF ANY ISSUES ARISE -->
     <div class="pt-5 pt-xxl-7 pb-5 pb-xxl-7">
@@ -766,53 +958,6 @@
     </div> -->
 
     <!-- FAQs -->
-    <!-- <div class="container pt-5 mb-5 p-4 d-flex flex-column align-items-center">
-        <h4 class="d-flex justify-content-center colored-heading text-animation h4">| Frequently Asked Questions</h4>
-        <h1 class="d-flex justify-content-center text-animation h1">FAQs</h1> 
-        <div class="accordion accordion-flush faq-container mt-3" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    How do solar panels work?
-                </button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body faq-answer-text">Solar panels capture sunlight and convert it into electricity through the photovoltaic effect.</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    How long do solar panels last?
-                </button>
-              </h2>
-              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body faq-answer-text">Solar panels typically last 25-30 years with proper maintenance.</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Do solar panels work on cloudy days?
-                </button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body faq-answer-text">Yes, solar panels can still generate electricity on cloudy days, but their efficiency is reduced.</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                    How much maintenance do solar panels require?
-                  </button>
-                </h2>
-                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body faq-answer-text">Solar panels require minimal maintenance, usually just regular cleaning and occasional inspections.</div>
-                </div>
-              </div>
-          </div>
-    </div> -->
-
     <div class="container pt-5 pt-xxl-7 d-flex flex-column align-items-center">
         <h4 class="d-flex justify-content-center colored-heading text-animation h4">| Frequently Asked Questions</h4>
         <h1 class="d-flex justify-content-center text-animation h1">FAQs</h1>
@@ -1032,7 +1177,6 @@
     </div>
 
     <!-- TESTIMONIALS (SWIPER)-->
-
     <div class="container pt-5 pt-xxl-7 pb-5 pb-xxl-7">
         <h4 class="d-flex justify-content-center colored-heading text-animation h4">| Testimonials</h4>
         <h1 class="d-flex justify-content-center text-animation h1">Happy Client Reviews</h1>
@@ -1041,18 +1185,12 @@
                 <div class="swiper-slide">
                     <div class="container testimonial-container mb-5">
                         <div class="testimonial-card">
-                            <!-- <span class="material-symbols-outlined quote first-quote">
-                                format_quote
-                            </span> -->
                             <i class="bi bi-quote quote first-quote"></i>
                             <p class="testimonial-text">
                                 "Switching to solar energy has been a game-changer for us. Not only
                                 have we significantly reduced our electricity bills, but we also feel good about our
                                 contribution to the environment. We couldn't be happier with our decision!"
                             </p>
-                            <!-- <span class="material-symbols-outlined quote second-quote">
-                                format_quote
-                            </span> -->
                             <i class="bi bi-quote quote second-quote"></i>
                         </div>
                         <div class="testimonial-footer">
@@ -1132,153 +1270,6 @@
             <div class="swiper-pagination"></div>
         </div>
     </div>
-
-    <!-- TESTIMONIALS 2 -->
-    <!-- <div class="container pt-5 pt-xxl-7 pb-5 pb-xxl-7">
-        <h4 class="d-flex justify-content-center colored-heading text-animation h4">| Testimonials</h4>
-        <h1 class="d-flex justify-content-center text-animation h1">Happy Client Reviews</h1>
-        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="2000">
-                    <div class="container testimonial-container mb-5">
-                        <div class="testimonial-card">
-                            <span class="material-symbols-outlined quote first-quote">
-                                format_quote
-                            </span>
-                            <p class="testimonial-text">
-                                "Switching to solar energy has been a game-changer for us. Not only
-                                have we significantly reduced our electricity bills, but we also feel good about our
-                                contribution to the environment. We couldn't be happier with our decision!"
-                            </p>
-                            <span class="material-symbols-outlined quote second-quote">
-                                format_quote
-                            </span>
-                        </div>
-                        <div class="testimonial-footer">
-                            <img src="./assets/img/home page images/testimonial images/client-profile-1.webp"
-                                alt="Client Image" class="testimonial-image">
-                            <div class="text-left">
-                                <p class="testimonial-name">Sarah Thompson</p>
-                                <p class="testimonial-designation">CEO, Thompson Homes</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item" data-bs-interval="2000">
-                    <div class="container testimonial-container mb-5">
-                        <div class="testimonial-card">
-                            <span class="material-symbols-outlined quote first-quote">
-                                format_quote
-                            </span>
-                            <p class="testimonial-text">
-                                "Installing solar panels has been a game-changer for our home. Not only have we slashed
-                                our electricity bills, but we also feel proud to contribute to renewable energy. We
-                                couldn't be happier with our decision!"
-                            </p>
-                            <span class="material-symbols-outlined quote second-quote">
-                                format_quote
-                            </span>
-                        </div>
-                        <div class="testimonial-footer">
-                            <img src="./assets/img/home page images/testimonial images/client-profile-1.webp"
-                                alt="Client Image" class="testimonial-image">
-                            <div class="text-left">
-                                <p class="testimonial-name">John Doe</p>
-                                <p class="testimonial-designation">Manager, Electronics Company</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item" data-bs-interval="2000">
-                    <div class="container testimonial-container mb-5">
-                        <div class="testimonial-card">
-                            <span class="material-symbols-outlined quote first-quote">
-                                format_quote
-                            </span>
-                            <p class="testimonial-text">
-                                "Switching to solar energy has not only saved us money but also reduced our carbon
-                                footprint. It's a win-win situation for our household and the environment."
-                            </p>
-                            <span class="material-symbols-outlined quote second-quote">
-                                format_quote
-                            </span>
-                        </div>
-                        <div class="testimonial-footer">
-                            <img src="./assets/img/home page images/testimonial images/client-profile-1.webp"
-                                alt="Client Image" class="testimonial-image">
-                            <div class="text-left">
-                                <p class="testimonial-name">Michael Johnson</p>
-                                <p class="testimonial-designation">Founder, Johnson Manufacturing</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-    <!-- <div class="carousel-item" data-bs-interval="5000">
-                    <div class="container testimonial-container mb-5">
-                        <div class="testimonial-card">
-                            <p class="testimonial-text">
-                                "The solar panels installed by this company are top-notch. We were
-                                impressed by their efficiency and the quality of the service provided. Our energy
-                                savings are substantial, and the entire process from consultation to installation
-                                was
-                                handled expertly. Highly recommend their services to anyone considering solar
-                                energy!"
-                            </p>
-                            <div class="testimonial-footer">
-                                <img src="./assets/img/client-profile-1.webp" alt="Client Image"
-                                    class="testimonial-image">
-                                <div class="text-left">
-                                    <p class="testimonial-name">Michael Johnson</p>
-                                    <p class="testimonial-designation">Director, Johnson Electricals</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-    <!-- <div class="carousel-item">
-                    <div class="container testimonial-container mb-5">
-                        <div class="testimonial-card">
-                            <p class="testimonial-text">"Switching to solar energy has been a game-changer for us. Not
-                                only
-                                have we significantly reduced our electricity bills, but we also feel good about our
-                                contribution to the environment. The installation process was seamless, and the team
-                                was professional and knowledgeable. We couldn't be happier with our decision!"
-                            </p>
-                            <div class="testimonial-footer">
-                                <img src="./assets/img/client-profile-1.webp" alt="Client Image"
-                                    class="testimonial-image">
-                                <div class="text-left">
-                                    <p class="testimonial-name">John Doe</p>
-                                    <p class="testimonial-designation">Manager, Doe Manufacturing</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-    <!-- </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon hidden-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon hidden-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div> -->
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -1364,21 +1355,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-        // var swiper = new Swiper(".mySwiper", {
-        //     slidesPerView: 2,
-        //     spaceBetween: 30,
-        //     autoplay: {
-        //         delay: 2500,
-        //         disableOnInteraction: false,
-        //     },
-        //     pagination: {
-        //         el: ".swiper-pagination",
-        //         clickable: true,
-        //     },
-        //     observer: true, // ADDED LATER
-        //     observeParents: true, // ADDED LATER
-        // });
-
         // SWIPER SCRIPT WITH BREAKPOINTS
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 'auto',

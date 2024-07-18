@@ -96,7 +96,8 @@
     <!-- NAVBAR 2 -->
     <nav class="navbar navbar-2 navbar-expand-lg p-0">
         <div class="container-fluid container-fluid-2">
-            <button class="btn get-a-quote-btn get-a-quote-btn-1 p-2">
+            <button class="btn get-a-quote-btn get-a-quote-btn-1 p-2" data-bs-toggle="modal"
+                data-bs-target="#quoteModal">
                 Get a Quote
             </button>
 
@@ -158,9 +159,119 @@
                     </ul>
                 </div>
             </div>
-            <button class="btn get-a-quote-btn get-a-quote-btn-2 p-2">
+            <button class="btn get-a-quote-btn get-a-quote-btn-2 p-2" data-bs-toggle="modal"
+                data-bs-target="#quoteModal">
                 Get a Quote
             </button>
+            <!-- MODAL -->
+            <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title h4 colored-heading" id="quoteModalLabel">Get a Quote</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="custom-form-2 row g-3">
+                                <div class="col-md-6">
+                                    <label for="inputName" class="form-label">Full Name <span
+                                            class="required-asterisk">*</span></label>
+                                    <input type="text" class="form-control" id="inputName" placeholder="Full name"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputNumber" class="form-label">Phone Number <span
+                                            class="required-asterisk">*</span></label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inputNumber"
+                                            placeholder="Phone number" required>
+                                        <span class="input-group-text">
+                                            <img src="./assets/img/home page images/indian-flag.webp" alt="Indian Flag"
+                                                class="flag-icon">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="inputEmail4" class="form-label">Email Address <span
+                                            class="required-asterisk">*</span></label>
+                                    <input type="email" class="form-control" id="inputEmail4"
+                                        placeholder="Email address" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="inputState" class="form-label">State <span
+                                            class="required-asterisk">*</span></label>
+                                    <select id="inputState" class="form-select" required>
+                                        <option selected disabled>Choose...</option>
+                                        <option>Andhra Pradesh</option>
+                                        <option>Arunachal Pradesh</option>
+                                        <option>Assam</option>
+                                        <option>Bihar</option>
+                                        <option>Chhattisgarh</option>
+                                        <option>Goa</option>
+                                        <option>Gujarat</option>
+                                        <option>Haryana</option>
+                                        <option>Himachal Pradesh</option>
+                                        <option>Jharkhand</option>
+                                        <option>Karnataka</option>
+                                        <option>Kerala</option>
+                                        <option>Madhya Pradesh</option>
+                                        <option>Maharashtra</option>
+                                        <option>Manipur</option>
+                                        <option>Meghalaya</option>
+                                        <option>Mizoram</option>
+                                        <option>Nagaland</option>
+                                        <option>Odisha</option>
+                                        <option>Punjab</option>
+                                        <option>Rajasthan</option>
+                                        <option>Sikkim</option>
+                                        <option>Tamil Nadu</option>
+                                        <option>Telangana</option>
+                                        <option>Tripura</option>
+                                        <option>Uttar Pradesh</option>
+                                        <option>Uttarakhand</option>
+                                        <option>West Bengal</option>
+                                        <option>Andaman and Nicobar Islands</option>
+                                        <option>Chandigarh</option>
+                                        <option>Dadra and Nagar Haveli and Daman and Diu</option>
+                                        <option>Lakshadweep</option>
+                                        <option>Delhi (National Capital Territory of Delhi)</option>
+                                        <option>Puducherry</option>
+                                        <option>Jammu and Kashmir</option>
+                                        <option>Ladakh</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="inputHomeCommercial" class="form-label">Solar For Home or Commercial?
+                                        <span class="required-asterisk">*</span></label>
+                                    <select id="inputHomeCommercial" class="form-select" required>
+                                        <option selected disabled>Choose...</option>
+                                        <option>Individual House or Villa</option>
+                                        <option>Flat or Apartment</option>
+                                        <option>Commercial</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="inputStateBill" class="form-label">Monthly Average Electricity Bill
+                                        <span class="required-asterisk">*</span></label>
+                                    <select id="inputStateBill" class="form-select" required>
+                                        <option selected disabled>Choose...</option>
+                                        <option>Less than ₹1000</option>
+                                        <option>₹1000 to ₹2000</option>
+                                        <option>₹2000 to ₹5000</option>
+                                        <option>More Than ₹5000</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary form-submit-btn-2 mt-2">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
     </nav>
 
