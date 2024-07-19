@@ -84,7 +84,11 @@
                                     target="_blank" rel="noopener noreferrer">
                                     <i class="bi bi-instagram"></i>
                                 </a>
-                                <i class="bi bi-linkedin"></i>
+                                <a class="social-icon"
+                                    href="https://www.linkedin.com/company/bhagirath-renewable-energy/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
                             </div>
                         </li>
                     </ul>
@@ -183,8 +187,8 @@
                                     <label for="inputNumber" class="form-label">Phone Number <span
                                             class="required-asterisk">*</span></label>
                                     <div class="input-group">
-                                        <input type="number" class="form-control" id="inputNumber"
-                                            placeholder="Phone number" required>
+                                        <input type="number" class="form-control no-spinner" id="inputNumber"
+                                            placeholder="Phone number" inputmode="numeric" required>
                                         <span class="input-group-text">
                                             <img src="./assets/img/home page images/indian-flag.webp" alt="Indian Flag"
                                                 class="flag-icon">
@@ -201,64 +205,66 @@
                                     <label for="inputState" class="form-label">State <span
                                             class="required-asterisk">*</span></label>
                                     <select id="inputState" class="form-select" required>
-                                        <option selected disabled>Choose...</option>
-                                        <option>Andhra Pradesh</option>
-                                        <option>Arunachal Pradesh</option>
-                                        <option>Assam</option>
-                                        <option>Bihar</option>
-                                        <option>Chhattisgarh</option>
-                                        <option>Goa</option>
-                                        <option>Gujarat</option>
-                                        <option>Haryana</option>
-                                        <option>Himachal Pradesh</option>
-                                        <option>Jharkhand</option>
-                                        <option>Karnataka</option>
-                                        <option>Kerala</option>
-                                        <option>Madhya Pradesh</option>
-                                        <option>Maharashtra</option>
-                                        <option>Manipur</option>
-                                        <option>Meghalaya</option>
-                                        <option>Mizoram</option>
-                                        <option>Nagaland</option>
-                                        <option>Odisha</option>
-                                        <option>Punjab</option>
-                                        <option>Rajasthan</option>
-                                        <option>Sikkim</option>
-                                        <option>Tamil Nadu</option>
-                                        <option>Telangana</option>
-                                        <option>Tripura</option>
-                                        <option>Uttar Pradesh</option>
-                                        <option>Uttarakhand</option>
-                                        <option>West Bengal</option>
-                                        <option>Andaman and Nicobar Islands</option>
-                                        <option>Chandigarh</option>
-                                        <option>Dadra and Nagar Haveli and Daman and Diu</option>
-                                        <option>Lakshadweep</option>
-                                        <option>Delhi (National Capital Territory of Delhi)</option>
-                                        <option>Puducherry</option>
-                                        <option>Jammu and Kashmir</option>
-                                        <option>Ladakh</option>
+                                        <option value="" selected disabled>Choose...</option>
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                        <option value="Assam">Assam</option>
+                                        <option value="Bihar">Bihar</option>
+                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="Haryana">Haryana</option>
+                                        <option value="Himachal">Himachal Pradesh</option>
+                                        <option value="Jharkhand">Jharkhand</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Madhya">Madhya Pradesh</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Manipur">Manipur</option>
+                                        <option value="Meghalaya">Meghalaya</option>
+                                        <option value="Mizoram">Mizoram</option>
+                                        <option value="Nagaland">Nagaland</option>
+                                        <option value="Odisha">Odisha</option>
+                                        <option value="Punjab">Punjab</option>
+                                        <option value="Rajasthan">Rajasthan</option>
+                                        <option value="Sikkim">Sikkim</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Tripura">Tripura</option>
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                        <option value="Uttarakhand">Uttarakhand</option>
+                                        <option value="West Bengal">West Bengal</option>
+                                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                        <option value="Chandigarh">Chandigarh</option>
+                                        <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli
+                                            and Daman and Diu</option>
+                                        <option value="Lakshadweep">Lakshadweep</option>
+                                        <option value="Delhi (National Capital Territory of Delhi)">Delhi (National
+                                            Capital Territory of Delhi)</option>
+                                        <option value="Puducherry">Puducherry</option>
+                                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                        <option value="Ladakh">Ladakh</option>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for="inputHomeCommercial" class="form-label">Solar For Home or Commercial?
                                         <span class="required-asterisk">*</span></label>
                                     <select id="inputHomeCommercial" class="form-select" required>
-                                        <option selected disabled>Choose...</option>
-                                        <option>Individual House or Villa</option>
-                                        <option>Flat or Apartment</option>
-                                        <option>Commercial</option>
+                                        <option value="" selected disabled>Choose...</option>
+                                        <option value="Individual House or Villa">Individual House or Villa</option>
+                                        <option value="Flat or Apartment">Flat or Apartment</option>
+                                        <option value="Commercial">Commercial</option>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for="inputStateBill" class="form-label">Monthly Average Electricity Bill
                                         <span class="required-asterisk">*</span></label>
                                     <select id="inputStateBill" class="form-select" required>
-                                        <option selected disabled>Choose...</option>
-                                        <option>Less than ₹1000</option>
-                                        <option>₹1000 to ₹2000</option>
-                                        <option>₹2000 to ₹5000</option>
-                                        <option>More Than ₹5000</option>
+                                        <option value="" selected disabled>Choose...</option>
+                                        <option value="Less than ₹1000">Less than ₹1000</option>
+                                        <option value="₹1000 to ₹2000">₹1000 to ₹2000</option>
+                                        <option value="₹2000 to ₹5000">₹2000 to ₹5000</option>
+                                        <option value="More Than ₹5000">More Than ₹5000</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
@@ -445,7 +451,10 @@
                     rel="noopener noreferrer">
                     <i class="bi bi-instagram"></i>
                 </a>
-                <i class="bi bi-linkedin"></i>
+                <a class="social-icon" href="https://www.linkedin.com/company/bhagirath-renewable-energy/"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-linkedin"></i>
+                </a>
             </div>
         </div>
         <div class="footer-middle">

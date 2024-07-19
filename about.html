@@ -84,7 +84,11 @@
                                     target="_blank" rel="noopener noreferrer">
                                     <i class="bi bi-instagram"></i>
                                 </a>
-                                <i class="bi bi-linkedin"></i>
+                                <a class="social-icon"
+                                    href="https://www.linkedin.com/company/bhagirath-renewable-energy/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
                             </div>
                         </li>
                     </ul>
@@ -162,6 +166,8 @@
                 data-bs-target="#quoteModal">
                 Get a Quote
             </button>
+
+
             <!-- MODAL -->
             <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -182,8 +188,8 @@
                                     <label for="inputNumber" class="form-label">Phone Number <span
                                             class="required-asterisk">*</span></label>
                                     <div class="input-group">
-                                        <input type="number" class="form-control" id="inputNumber"
-                                            placeholder="Phone number" required>
+                                        <input type="number" class="form-control no-spinner" id="inputNumber"
+                                            placeholder="Phone number" inputmode="numeric" required>
                                         <span class="input-group-text">
                                             <img src="./assets/img/home page images/indian-flag.webp" alt="Indian Flag"
                                                 class="flag-icon">
@@ -200,64 +206,66 @@
                                     <label for="inputState" class="form-label">State <span
                                             class="required-asterisk">*</span></label>
                                     <select id="inputState" class="form-select" required>
-                                        <option selected disabled>Choose...</option>
-                                        <option>Andhra Pradesh</option>
-                                        <option>Arunachal Pradesh</option>
-                                        <option>Assam</option>
-                                        <option>Bihar</option>
-                                        <option>Chhattisgarh</option>
-                                        <option>Goa</option>
-                                        <option>Gujarat</option>
-                                        <option>Haryana</option>
-                                        <option>Himachal Pradesh</option>
-                                        <option>Jharkhand</option>
-                                        <option>Karnataka</option>
-                                        <option>Kerala</option>
-                                        <option>Madhya Pradesh</option>
-                                        <option>Maharashtra</option>
-                                        <option>Manipur</option>
-                                        <option>Meghalaya</option>
-                                        <option>Mizoram</option>
-                                        <option>Nagaland</option>
-                                        <option>Odisha</option>
-                                        <option>Punjab</option>
-                                        <option>Rajasthan</option>
-                                        <option>Sikkim</option>
-                                        <option>Tamil Nadu</option>
-                                        <option>Telangana</option>
-                                        <option>Tripura</option>
-                                        <option>Uttar Pradesh</option>
-                                        <option>Uttarakhand</option>
-                                        <option>West Bengal</option>
-                                        <option>Andaman and Nicobar Islands</option>
-                                        <option>Chandigarh</option>
-                                        <option>Dadra and Nagar Haveli and Daman and Diu</option>
-                                        <option>Lakshadweep</option>
-                                        <option>Delhi (National Capital Territory of Delhi)</option>
-                                        <option>Puducherry</option>
-                                        <option>Jammu and Kashmir</option>
-                                        <option>Ladakh</option>
+                                        <option value="" selected disabled>Choose...</option>
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                        <option value="Assam">Assam</option>
+                                        <option value="Bihar">Bihar</option>
+                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="Haryana">Haryana</option>
+                                        <option value="Himachal">Himachal Pradesh</option>
+                                        <option value="Jharkhand">Jharkhand</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Madhya">Madhya Pradesh</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Manipur">Manipur</option>
+                                        <option value="Meghalaya">Meghalaya</option>
+                                        <option value="Mizoram">Mizoram</option>
+                                        <option value="Nagaland">Nagaland</option>
+                                        <option value="Odisha">Odisha</option>
+                                        <option value="Punjab">Punjab</option>
+                                        <option value="Rajasthan">Rajasthan</option>
+                                        <option value="Sikkim">Sikkim</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Tripura">Tripura</option>
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                        <option value="Uttarakhand">Uttarakhand</option>
+                                        <option value="West Bengal">West Bengal</option>
+                                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                        <option value="Chandigarh">Chandigarh</option>
+                                        <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli
+                                            and Daman and Diu</option>
+                                        <option value="Lakshadweep">Lakshadweep</option>
+                                        <option value="Delhi (National Capital Territory of Delhi)">Delhi (National
+                                            Capital Territory of Delhi)</option>
+                                        <option value="Puducherry">Puducherry</option>
+                                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                        <option value="Ladakh">Ladakh</option>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for="inputHomeCommercial" class="form-label">Solar For Home or Commercial?
                                         <span class="required-asterisk">*</span></label>
                                     <select id="inputHomeCommercial" class="form-select" required>
-                                        <option selected disabled>Choose...</option>
-                                        <option>Individual House or Villa</option>
-                                        <option>Flat or Apartment</option>
-                                        <option>Commercial</option>
+                                        <option value="" selected disabled>Choose...</option>
+                                        <option value="Individual House or Villa">Individual House or Villa</option>
+                                        <option value="Flat or Apartment">Flat or Apartment</option>
+                                        <option value="Commercial">Commercial</option>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for="inputStateBill" class="form-label">Monthly Average Electricity Bill
                                         <span class="required-asterisk">*</span></label>
                                     <select id="inputStateBill" class="form-select" required>
-                                        <option selected disabled>Choose...</option>
-                                        <option>Less than ₹1000</option>
-                                        <option>₹1000 to ₹2000</option>
-                                        <option>₹2000 to ₹5000</option>
-                                        <option>More Than ₹5000</option>
+                                        <option value="" selected disabled>Choose...</option>
+                                        <option value="Less than ₹1000">Less than ₹1000</option>
+                                        <option value="₹1000 to ₹2000">₹1000 to ₹2000</option>
+                                        <option value="₹2000 to ₹5000">₹2000 to ₹5000</option>
+                                        <option value="More Than ₹5000">More Than ₹5000</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
@@ -323,49 +331,10 @@
         </div>
     </div>
 
-    <!-- ABOUT US CARD (OLD) -->
-    <!-- <div class="container pt-5 pb-5 px-4">
-        <div class="row about-us-card mt-4">
-            <div class="col-md-4 subdiv">
-                <div class="about-us-card-icon">
-                    <span class="material-symbols-outlined">
-                        target
-                    </span>
-                </div>
-                <h4 class="text-center text-justify">Our Mission</h4>
-                <p class="light-text">BREL is dedicated to transforming the energy landscape with sustainable solar
-                    solutions, aiming
-                    to create a cleaner and more eco-friendly world.</p>
-            </div>
-            <div class="col-md-4 subdiv">
-                <div class="about-us-card-icon">
-                    <span class="material-symbols-outlined">
-                        visibility
-                    </span>
-                </div>
-                <h4 class="text-center">Our Vision</h4>
-                <p class="light-text">We envision a future where solar power is the norm, leading the way to a
-                    sustainable and accessible
-                    energy future for all on a solar-powered planet with good efficiency.</p>
-            </div>
-            <div class="col-md-4 subdiv">
-                <div class="about-us-card-icon">
-                    <span class="material-symbols-outlined">
-                        emoji_objects
-                    </span>
-                </div>
-                <h4 class="text-center">Our Values</h4>
-                <p class="light-text">At BREL, our core values are integrity, innovation, and environmental stewardship.
-                    We are committed
-                    to transparent, reliable energy.</p>
-            </div>
-        </div>
-    </div> -->
-
     <!-- NEWER CARDS -->
     <div class="row row-cols-1 row-cols-md-3 g-4 pt-6 px-5 pb-5 no-gutters">
         <div class="col">
-            <div class="card p-4">
+            <div class="card p-4 h-100">
                 <div class="about-us-card-icon">
                     <span class="material-symbols-outlined">
                         target
@@ -377,7 +346,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="card p-4">
+            <div class="card p-4 h-100">
                 <div class="about-us-card-icon">
                     <span class="material-symbols-outlined">
                         visibility
@@ -390,7 +359,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="card p-4">
+            <div class="card p-4 h-100">
                 <div class="about-us-card-icon">
                     <span class="material-symbols-outlined">
                         emoji_objects
@@ -443,7 +412,7 @@
 
 
     <!-- OUR TEAM -->
-    <div class="container pt-4 pb-4 px-4">
+    <div class="container p-4">
         <h5 class="d-flex justify-content-center colored-heading text-animation h5">| WE'RE THE BEST</h5>
         <h1 class="d-flex justify-content-center text-animation h1">Our Team</h1>
 
@@ -509,48 +478,16 @@
     </div>
 
     <!-- OUR PRODUCTS -->
-
-    <!-- OLDER -->
-    <!-- <div class="container-fluid p-0 m-0">
-        <div class="our-products-section dark-overlay-50 p-0 m-0 pt-4 pb-4">
-            <h5 class="d-flex justify-content-center light-color-heading text-animation h5 pt-4 high-z-index">| OUR
-                RANGE OF PRODUCTS</h5>
-            <h1 class="d-flex justify-content-center white-heading text-animation h1 high-z-index">
-                Our Products</h1>
-            <div class="row p-4 m-0">
-                <div class="col-md-6 order-md-2 our-products-image-dynamic high-z-index">
-                    <img src="./assets/img/our products/our-product-1-alt.webp" class="fixed-size-image"
-                        alt="Product 1">
-                </div>
-                <div class="col-md-6 order-md-1 white-heading high-z-index">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link white-heading active" aria-current="page" href="#">SunPower X1000</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link white-heading" href="#">SunPower N500</a>
-                        </li>
-                    </ul>
-                    <h2 class="pt-4">SunPower X1000</h2>
-                    <p>The SunPower X1000 boasts an impressive efficiency rating of 22%, ensuring maximum energy
-                        conversion from sunlight.</p>
-                    <p><strong>Dimensions: </strong>1.5 meters by 1 meter</p>
-                    <p><strong>Power: </strong>300 watts of power under optimal sunlight conditions</p>
-                    <p><strong>Warranty: </strong>25-year performance warranty and a 10-year product warranty</p>
-                    <div class="col-md-6 our-products-image-static high-z-index">
-                        <img src="./assets/img/our products/our-product-1-alt.webp" alt="Product 1">
-                    </div>
-                    <button class="extra-info-button">READ MORE</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-7
+    
     <div class="container-fluid p-0 m-0">
-        <div class="our-products-section p-0 m-0 pt-4 pb-4 dark-overlay-50">
-            <h5 class="d-flex justify-content-center light-color-heading text-animation h5 pt-4 high-z-index">| OUR RANGE OF PRODUCTS</h5>
-            <h1 class="d-flex justify-content-center white-heading text-animation h1 high-z-index">Our Products</h1>
+        <div class="our-products-section p-0 m-0 pb-4 dark-overlay-70">
+            <!-- <h5 class="d-flex justify-content-center light-color-heading text-animation h5 pt-4 high-z-index">| OUR
+                RANGE OF PRODUCTS</h5>
+            <h1 class="d-flex justify-content-center white-heading text-animation h1 high-z-index">Our Products</h1> -->
             <div class="row p-4 m-0">
+                <h5 class="d-flex justify-content-center light-color-heading text-animation h5 pt-4 high-z-index">| OUR
+                    RANGE OF PRODUCTS</h5>
+                <h1 class="d-flex justify-content-center white-heading text-animation h1 high-z-index">Our Products</h1>
                 <div class="col-md-6 order-md-2 our-products-image-dynamic high-z-index">
                     <img id="product-image" src="./assets/img/our products/temporary-product-image.webp"
                         class="fixed-size-image" alt="Product 1">
@@ -698,7 +635,10 @@
                     rel="noopener noreferrer">
                     <i class="bi bi-instagram"></i>
                 </a>
-                <i class="bi bi-linkedin"></i>
+                <a class="social-icon" href="https://www.linkedin.com/company/bhagirath-renewable-energy/"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-linkedin"></i>
+                </a>
             </div>
         </div>
         <div class="footer-middle">
