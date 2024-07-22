@@ -88,7 +88,7 @@
 
 /* MAIN SECTION */
 
-.calculator-submit-btn {
+/* .calculator-submit-btn {
     border-radius: 5px;
     font-size: 1rem;
     color: var(--white);
@@ -105,4 +105,40 @@
     .calculator-container {
         max-width: 60%;
     }
+} */
+
+/* CALCULATOR */
+
+.calculator-container {
+    background-color: var(--primary-color) !important;
+}
+
+.solar-calculator {
+    color: var(--white) !important;
+}
+
+@media (min-width: 992px) {
+    .solar-calculator {
+        max-width: 60%;
+    }
+}
+
+.calculator-card-container {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.calculator-card-container>.material-symbols-outlined {
+    font-size: 3rem;
+    margin-right: 10px;
+    color: var(--secondary-color);
+}
+
+#priceIcon {
+    border: none;
+    cursor: default;
 }

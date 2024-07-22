@@ -298,179 +298,97 @@
     </div>
 
     <!-- MAIN SECTION -->
-    <h2 class="h2 text-center colored-heading text-animation mt-4">Ready to Switch to Solar? Calculate your requirement.</h2>
+    <div class="calculator-container">
+        <h2 class="h2 text-center text-animation px-3 pt-4 white-text">Ready to Switch to Solar? Calculate your
+            requirement.</h2>
 
-    <!-- OLD CALCULATOR -->
-    <!-- <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div style="
-                  border: 1px solid #8a8a8a;
-                  box-shadow: 0px 0px 5px #646464;
-                  padding: 20px;
-                  border-radius: 15px;
-                ">
-                    <form id="conversionForm">
-                        <br />
-                        <div class="form-group d-flex">
-                            <Label>Name:-</Label>
-                            <input type="text" placeholder="Enter your name" class="form-control mx-auto mb-3"
-                                id="nameInput" required; style="width: 77%;" />
+        <div class="solar-calculator mx-auto px-3 pt-4 pb-5">
+            <div class="mb-3">
+                <label for="billInput" class="form-label">Enter your monthly electricity bill (in INR):</label>
+                <!-- <input type="number" class="form-control" id="billInput" aria-describedby="emailHelp"> -->
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text bg-secondary-color text-white" id="priceIcon">
+                        <!-- <div id="div-system-price"> -->
+                            <span class="material-symbols-outlined">
+                                currency_rupee
+                            </span>
+                        <!-- </div> -->
+                    </span>
+                    <input type="number" class="form-control" id="billInput" aria-describedby="emailHelp">
+                </div>
+
+            </div>
+
+
+
+
+            <div class="row no-gutters">
+                <div class="col-md-6 p-2">
+                    <div class="calculator-card-container">
+                        <span class="material-symbols-outlined">
+                            solar_power
+                        </span>
+                        <div id="div-system-size">
+                            System Size:
                         </div>
-                        <div class="form-group d-flex">
-                            <Label>Number:-</Label>
-                            <input type="tel" placeholder="Enter your phone number" class="form-control mx-auto mb-3"
-                                id="phoneInput" required style="width: 80%;" />
+                    </div>
+                </div>
+                <div class="col-md-6 p-2">
+                    <div class="calculator-card-container">
+                        <span class="material-symbols-outlined">
+                            currency_rupee
+                        </span>
+                        <div id="div-system-price">
+                            Price:
                         </div>
-                        <div class="form-group d-flex">
-                            <Label>Email:-</Label>
-                            <input type="email" placeholder="Enter your email address" class="form-control mx-auto mb-3"
-                                id="emailInput" required style="width: 77%" />
+                    </div>
+                </div>
+                <div class="col-md-6 p-2">
+                    <div class="calculator-card-container">
+                        <span class="material-symbols-outlined">
+                            shoppingmode
+                        </span>
+                        <div id="div-annual-savings">
+                            Annual Savings:
                         </div>
-                        <div class="form-group d-flex">
-                            <label>city:-</label>
-                            <input type="text" placeholder="Enter your city" class="form-control mx-auto mb-3"
-                                id="cityInput" required style="width: 75%" />
+                    </div>
+                </div>
+                <div class="col-md-6 p-2">
+                    <div class="calculator-card-container">
+                        <span class="material-symbols-outlined">
+                            battery_charging_90
+                        </span>
+                        <div id="div-energy-generated">
+                            Energy Generated:
                         </div>
-                        <div class=" form-group d-flex">
-                            <label>Bill Amount:-</label>
-                            <input type="number" placeholder="Enter Monthly Bill Amount (INR):"
-                                class="form-control mx-auto mb-3" id="inrInput" required style="width: 83%;" />
-                        </div>
-                        <div class="text-center middle ">
-                            <button type="button" id="conversionForm" class="bg_background bg btn btn-lg btn2 "
-                                data-toggle="modal" data-target="#resultModal">
-                                Calculate Now
-                            </button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="resultModalLabel">Your Requirement:</h5>
-                </div>
-                <div class="modal-body">
-                    <p id="resultText"></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeModal">
-                        Close
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
-    <!-- NEW CALCULATOR -->
-    <!-- <div class="container calculator-container p-4">
-        <form id="conversionForm">
-            <div class="mb-3">
-                <label class="form-label">Name:</label>
-                <input type="text" placeholder="Enter your name" class="form-control" id="nameInput" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Phone Number:</label>
-                <input type="tel" placeholder="Enter your phone number" class="form-control" id="phoneInput" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Email Address:</label>
-                <input type="email" placeholder="Enter your email address" class="form-control" id="emailInput"
-                    required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">City:</label>
-                <input type="text" placeholder="Enter your city" class="form-control" id="cityInput" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Bill Amount:</label>
-                <input type="number" placeholder="Enter your monthly bill amount (INR)" class="form-control"
-                    id="inrInput" required>
-            </div>
-            <button class="btn calculator-submit-btn p-2" type="submit">
-                Calculate Now
-            </button>
-        </form>
+    <!-- SECTION 2 -->
+    <div class="container">
+        <h2 class="h2 text-center text-animation px-3 pt-4">What is Solar Calculator?</h2>
+        <p class="light-text justified-text px-3 pt-4">A Solar Calculator is a valuable tool designed to estimate the
+            potential benefits of installing solar energy systems based on your specific energy consumption. By
+            inputting your monthly electricity bill amount in Indian Rupees (INR), the calculator provides insights into
+            various aspects of solar energy adoption:</p>
+        <p class="light-text justified-text px-3 pt-4"><strong>System Size:</strong> Calculates the recommended solar
+            panel capacity in kilowatts (kW) needed to meet your energy requirements.</p>
+        <p class="light-text justified-text px-3 pt-4"><strong>2. Price:</strong> Estimates the approximate cost of
+            installing a solar energy system based on the input bill amount.</p>
+        <p class="light-text justified-text px-3 pt-4"><strong>3. Annual Savings:</strong> Projects the potential
+            savings you could achieve annually by switching to solar energy, assuming typical savings based on the
+            entered monthly bill.</p>
+        <p class="light-text justified-text px-3 pt-4"><strong>4. Energy Generated:</strong> Provides an estimate of the
+            electricity units (kWh) that your solar system could generate per month, contributing to energy independence
+            and sustainability.</p>
+        <p class="light-text justified-text px-3 py-4">Using accurate calculations and industry standards, a Solar
+            Calculator helps you make informed decisions about harnessing solar power for your home or business,
+            contributing to environmental sustainability while potentially reducing long-term energy costs.</p>
     </div>
-    <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="resultModalLabel">Your Requirement:</h5>
-                </div>
-                <div class="modal-body">
-                    <p id="resultText"></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeModal">
-                        Close
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- NEWER CALCULATOR -->
-    <!-- <div class="container calculator-container p-4">
-        <form id="conversionForm">
-            <div class="mb-3">
-                <label class="form-label">Name:</label>
-                <input type="text" placeholder="Enter your name" class="form-control" id="nameInput" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Phone Number:</label>
-                <input type="tel" placeholder="Enter your phone number" class="form-control" id="phoneInput" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Email Address:</label>
-                <input type="email" placeholder="Enter your email address" class="form-control" id="emailInput" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">City:</label>
-                <input type="text" placeholder="Enter your city" class="form-control" id="cityInput" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Bill Amount:</label>
-                <input type="number" placeholder="Enter your monthly bill amount (INR)" class="form-control" id="inrInput"
-                    required>
-            </div>
-            <button class="btn calculator-submit-btn p-2" type="submit">
-                Calculate Now
-            </button>
-        </form>
-    </div>
-    <div class="container mt-4 p-4">
-        <div id="resultContainer">
-            <h3>Calculation Result</h3>
-            <p id="resultText"></p>
-        </div>
-    </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- FOOTER -->
     <footer class="footer">

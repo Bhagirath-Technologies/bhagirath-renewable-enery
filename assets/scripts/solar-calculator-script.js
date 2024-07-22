@@ -1,115 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
-    function billToKW(inr) {
-        return inr * 0.0008928571428571428;
-    }
+    var billInput = document.getElementById("billInput");
+    var systemSizeDiv = document.getElementById("div-system-size");
+    var systemPriceDiv = document.getElementById("div-system-price");
+    var annualSavingsDiv = document.getElementById("div-annual-savings");
+    var energyGeneratedDiv = document.getElementById("div-energy-generated");
 
-    var conversionForm = document.getElementById("conversionForm");
-    var resultContainer = document.getElementById("resultContainer");
-    var resultText = document.getElementById("resultText");
+    billInput.addEventListener("input", function () {
+        var billAmount = parseFloat(billInput.value);
 
-    conversionForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent default form submission
+        if (!isNaN(billAmount)) {
+            // Calculate system size, price, annual savings, and energy generated based on bill amount
+            var systemSize = (billAmount / 1000).toFixed(1) + " kW";
+            var price = (billAmount * 90).toLocaleString("en-IN", { style: "currency", currency: "INR" });
+            var annualSavings = (billAmount * 12).toLocaleString("en-IN"); // Assuming annual savings = 12 * monthly bill
+            var energyGenerated = (billAmount * 0.65).toFixed(0); // Assuming energy generated = 0.65 * monthly bill
 
-        var name = document.getElementById("nameInput").value;
-        var phone = document.getElementById("phoneInput").value;
-        var email = document.getElementById("emailInput").value;
-        var city = document.getElementById("cityInput").value;
-        var inr = parseFloat(document.getElementById("inrInput").value);
-
-        if (!isNaN(inr)) {
-            var kw = billToKW(inr);
-            resultText.innerHTML =
-                "Hi, " +
-                name +
-                "<br>Monthly Bill Amount*: &#8377; " +
-                inr +
-                "<br>You require 'KW' capacity plant to get maximum saving: " +
-                kw.toFixed(12);
-            resultContainer.style.display = "block"; // Show the result container
+            // Update text content of the divs
+            systemSizeDiv.textContent = "System Size: " + systemSize;
+            systemPriceDiv.textContent = "Price: " + price;
+            annualSavingsDiv.textContent = "Annual Savings: Rs. " + annualSavings;
+            energyGeneratedDiv.textContent = "Energy Generated: " + energyGenerated + " units";
         } else {
-            resultText.textContent = "Please enter a valid amount in Indian Rupees (INR).";
-            resultContainer.style.display = "none"; // Hide the result container if no valid amount
+            // Clear divs if input is not a valid number
+            systemSizeDiv.textContent = "System Size: ";
+            systemPriceDiv.textContent = "Price:";
+            annualSavingsDiv.textContent = "Annual Savings:";
+            energyGeneratedDiv.textContent = "Energy Generated:";
         }
     });
 });
-
-
-// // ====================================== OLDER JS CODE ======================================
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     function billToKW(inr) {
-//         return inr * 0.0008928571428571428;
-//     }
-
-//     var conversionForm = document.getElementById("conversionForm");
-//     var resultText = document.getElementById("resultText");
-//     var resultModal = document.getElementById("resultModal");
-//     var closeModal = document.getElementById("closeModal");
-
-//     conversionForm.addEventListener("submit", function (event) {
-//         event.preventDefault(); // Prevent default form submission
-
-//         var name = document.getElementById("nameInput").value;
-//         var phone = document.getElementById("phoneInput").value;
-//         var email = document.getElementById("emailInput").value;
-//         var city = document.getElementById("cityInput").value;
-//         var inr = parseFloat(document.getElementById("inrInput").value);
-
-//         if (!isNaN(inr)) {
-//             var kw = billToKW(inr);
-//             resultText.innerHTML =
-//                 "<strong>Hi, </strong> " +
-//                 name +
-//                 "<br><br><strong>Monthly Bill Amount* :</strong> &#8377; " +
-//                 inr +
-//                 "<br><br><strong>You require 'KW' capacity plant to get maximum saving :</strong> " +
-//                 kw.toFixed(12);
-//             $('#resultModal').modal('show'); // Use jQuery to show the modal (since Bootstrap modal may depend on it)
-//         } else {
-//             resultText.textContent = "Please enter a valid amount in Indian Rupees (INR).";
-//             $('#resultModal').modal('show'); // Use jQuery to show the modal (since Bootstrap modal may depend on it)
-//         }
-//     });
-
-//     closeModal.addEventListener("click", function () {
-//         $('#resultModal').modal('hide'); // Use jQuery to hide the modal
-//     });
-// });
-
-// ====================================== CODE WITH JQUERY ======================================
-
-// $(document).ready(function () {
-//     function billToKW(inr) {
-//         return inr * 0.0008928571428571428;
-//     }
-
-//     $("#conversionForm button").on("click", function () {
-//         var name = $("#nameInput").val();
-//         var phone = $("#phoneInput").val();
-//         var email = $("#emailInput").val();
-//         var city = $("#cityInput").val();
-//         var inr = parseFloat($("#inrInput").val());
-
-//         if (!isNaN(inr)) {
-//             var kw = billToKW(inr);
-//             $("#resultText").html(
-//                 "<strong>Hi, </strong> " +
-//                 name +
-//                 "<br><br><strong>Monthly Bill Amount* :</strong> &#8377; " +
-//                 inr +
-//                 "<br><br><strong>You require 'KW' capacity plant to get maximum saving :</strong> " +
-//                 kw.toFixed(12)
-//             );
-//             $("#resultModal").modal("show");
-//         } else {
-//             $("#resultText").text(
-//                 "Please enter a valid amount in Indian Rupees (INR)."
-//             );
-//             $("#resultModal").modal("show");
-//         }
-//     });
-
-//     $("#closeModal").click(function () {
-//         $("#resultModal").modal("hide");
-//     });
-// });

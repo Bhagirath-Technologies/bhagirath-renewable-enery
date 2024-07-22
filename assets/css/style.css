@@ -2977,6 +2977,10 @@
 
 /* EXTRAS */
 
+.bg-secondary-color {
+    background-color: var(--secondary-color);
+}
+
 .high-z-index {
     z-index: 99 !important;
 }
