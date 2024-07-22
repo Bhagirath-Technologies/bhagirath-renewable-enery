@@ -1966,12 +1966,17 @@
 
 #carousel-list-div {
     position: absolute;
-    top: 0;
+    /* top: 0; */
     left: 0;
-    height: 100%;
+    /* height: 100%; */
     width: 220px;
     display: flex;
     flex-direction: column;
+
+    /* CHANGES (22-07-24) */
+    top: 50%;
+    height: 80%;
+    transform: translateY(-50%);
 }
 
 .carousel-list-item-container {
@@ -2076,6 +2081,7 @@
     z-index: 0;
 
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%);
 }
 
 /* ADDED LATER */

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Bhagirath Renewable Energy Private Limited</title>
+    <title>Solar Calculator | Bhagirath Renewable Energy Private Limited</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/contact.css">
+    <link rel="stylesheet" href="./assets/css/solar-calculator.css">
 
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -104,7 +104,6 @@
                 data-bs-target="#quoteModal">
                 Get a Quote
             </button>
-
             <button class="navbar-toggler navbar-toggler-2 custom-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
                 <span class="material-symbols-outlined toggler-icon-2">
@@ -158,7 +157,8 @@
                             <a class="nav-link white-text hover-light-blue p-3" href="./contact.html">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link white-text hover-light-blue p-3" href="./solar-calculator.html">Solar Calculator</a>
+                            <a class="nav-link white-text hover-light-blue p-3" href="./solar-calculator.html">Solar
+                                Calculator</a>
                         </li>
                     </ul>
                 </div>
@@ -167,6 +167,8 @@
                 data-bs-target="#quoteModal">
                 Get a Quote
             </button>
+
+
             <!-- MODAL -->
             <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -277,226 +279,184 @@
             </div>
 
 
+
         </div>
     </nav>
 
-    <!-- HERO SECTION (CONTACT US) -->
+    <!-- HERO SECTION (SOLAR CALCULATOR) -->
     <div class="container-fluid p-0">
-        <div class="contact-us-hero-section dark-overlay-50">
-            <div class="contact-us-hero-content">
-                <h1 class="bold-text">Contact Us</h1>
+        <div class="solar-calculator-hero-section dark-overlay-50">
+            <div class="solar-calculator-hero-content">
+                <h1 class="bold-text">Solar Calculator</h1>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
                     <li class="breadcrumb-separator">/</li>
-                    <li class="breadcrumb-item active">Contact Us</li>
+                    <li class="breadcrumb-item active">Solar Calculator</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- MAIN SECTION (CONTACT US)  -->
-    <div class="contact-us-main-section">
-        <div class="row no-gutters">
-            <div class="col-md-7">
-                <!-- MAP -->
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7646.836838759959!2d72.51842075076844!3d23.027161940164177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85a789f709f3%3A0x247b137594876fa5!2sIscon%20Emporio!5e0!3m2!1sen!2sin!4v1721122668598!5m2!1sen!2sin"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
-            <div class="col-md-5">
-                <div class="contact-details-comp-1 pt-3 pb-3">
-                    <span class="contact-details-comp-1-icon material-symbols-outlined p-3">location_on</span>
-                    <div class="contact-details-comp-1-details pb-4">
-                        <div class="contact-details-comp-1-label medium-text">Location:</div>
-                        <div class="contact-details-comp-1-text light-text">526 Iscon Emporio, Next to Star Bazaar,
-                            Satellite Road, Ahmedabad, Gujarat 380015 India</div>
-                    </div>
-                </div>
-                <div class="contact-details-comp-1 pb-3">
-                    <span class="contact-details-comp-1-icon material-symbols-outlined p-3">drafts</span>
-                    <div class="contact-details-comp-1-details pb-4">
-                        <div class="contact-details-comp-1-label medium-text">Email:</div>
-                        <div class="contact-details-comp-1-text light-text">info@brelindia.com</div>
-                    </div>
-                </div>
-                <div class="contact-details-comp-1 pb-5">
-                    <span class="contact-details-comp-1-icon material-symbols-outlined p-3">call</span>
-                    <div class="contact-details-comp-1-details">
-                        <div class="contact-details-comp-1-label medium-text">Call:</div>
-                        <div class="contact-details-comp-1-text light-text">+91-9909941395</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- MAIN SECTION -->
+    <h2 class="h2 text-center colored-heading text-animation mt-4">Ready to Switch to Solar? Calculate your requirement.</h2>
 
-    <!-- FORM -->
-    <div class="row no-gutters form-container pt-5 pt-xxl-7 pb-5 pb-xxl-7 px-2">
-        <div class="col-md-6 d-flex flex-column align-items-center">
-            <h4 class="d-flex justify-content-center text-secondary-color-1 text-animation h4">| Get in Touch</h4>
-            <h1 class="d-flex justify-content-center text-white text-animation h1">Contact Us</h1>
-
-
-            <!-- <form class="custom-form text-white row g-3 mt-4 mb-4">
-                <div class="col-md-6">
-                    <label for="inputName" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="inputName">
+    <!-- OLD CALCULATOR -->
+    <!-- <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div style="
+                  border: 1px solid #8a8a8a;
+                  box-shadow: 0px 0px 5px #646464;
+                  padding: 20px;
+                  border-radius: 15px;
+                ">
+                    <form id="conversionForm">
+                        <br />
+                        <div class="form-group d-flex">
+                            <Label>Name:-</Label>
+                            <input type="text" placeholder="Enter your name" class="form-control mx-auto mb-3"
+                                id="nameInput" required; style="width: 77%;" />
+                        </div>
+                        <div class="form-group d-flex">
+                            <Label>Number:-</Label>
+                            <input type="tel" placeholder="Enter your phone number" class="form-control mx-auto mb-3"
+                                id="phoneInput" required style="width: 80%;" />
+                        </div>
+                        <div class="form-group d-flex">
+                            <Label>Email:-</Label>
+                            <input type="email" placeholder="Enter your email address" class="form-control mx-auto mb-3"
+                                id="emailInput" required style="width: 77%" />
+                        </div>
+                        <div class="form-group d-flex">
+                            <label>city:-</label>
+                            <input type="text" placeholder="Enter your city" class="form-control mx-auto mb-3"
+                                id="cityInput" required style="width: 75%" />
+                        </div>
+                        <div class=" form-group d-flex">
+                            <label>Bill Amount:-</label>
+                            <input type="number" placeholder="Enter Monthly Bill Amount (INR):"
+                                class="form-control mx-auto mb-3" id="inrInput" required style="width: 83%;" />
+                        </div>
+                        <div class="text-center middle ">
+                            <button type="button" id="conversionForm" class="bg_background bg btn btn-lg btn2 "
+                                data-toggle="modal" data-target="#resultModal">
+                                Calculate Now
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-md-6">
-                    <label for="inputNumber" class="form-label">Phone Number</label>
-                    <input type="number" class="form-control" id="inputNumber">
-                </div>
-                <div class="col-md-12">
-                    <label for="inputEmail4" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="inputEmail4">
-                </div>
-                <div class="col-md-12">
-                    <label for="inputStateBill" class="form-label">Monthly Electricity Bill</label>
-                    <select id="inputStateBill" class="form-select">
-                        <option selected>Choose...</option>
-                        <option>Less Than ₹2000</option>
-                        <option>₹2000 to ₹5000</option>
-                        <option>₹5000 to ₹8000</option>
-                        <option>More Than ₹8000</option>
-                    </select>
-                </div>
-                <div class="col-12">
-                    <label for="inputAddress" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputCity" class="form-label">City</label>
-                    <input type="text" class="form-control" id="inputCity">
-                </div>
-                <div class="col-md-4">
-                    <label for="inputState" class="form-label">State</label>
-                    <select id="inputState" class="form-select">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <label for="inputZip" class="form-label">Zip</label>
-                    <input type="text" class="form-control" id="inputZip">
-                </div>
-                <div class="col-12">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                            I agree with BREL's <a href="#">Terms of Service</a>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary form-submit-btn">Submit</button>
-                </div>
-            </form> -->
-
-
-            <form class="custom-form text-white row g-3 mt-4 mb-4">
-                <div class="col-md-6">
-                    <label for="inputName" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="inputName">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputNumber" class="form-label">Phone Number</label>
-                    <input type="number" class="form-control" id="inputNumber">
-                </div>
-                <div class="col-md-12">
-                    <label for="inputEmail4" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="inputEmail4">
-                </div>
-                <div class="col-md-12">
-                    <label for="inputState" class="form-label">State</label>
-                    <select id="inputState" class="form-select">
-                        <option selected>Choose...</option>
-                        <option>Andhra Pradesh</option>
-                        <option>Arunachal Pradesh</option>
-                        <option>Assam</option>
-                        <option>Bihar</option>
-                        <option>Chhattisgarh</option>
-                        <option>Goa</option>
-                        <option>Gujarat</option>
-                        <option>Haryana</option>
-                        <option>Himachal Pradesh</option>
-                        <option>Jharkhand</option>
-                        <option>Karnataka</option>
-                        <option>Kerala</option>
-                        <option>Madhya Pradesh</option>
-                        <option>Maharashtra</option>
-                        <option>Manipur</option>
-                        <option>Meghalaya</option>
-                        <option>Mizoram</option>
-                        <option>Nagaland</option>
-                        <option>Odisha</option>
-                        <option>Punjab</option>
-                        <option>Rajasthan</option>
-                        <option>Sikkim</option>
-                        <option>Tamil Nadu</option>
-                        <option>Telangana</option>
-                        <option>Tripura</option>
-                        <option>Uttar Pradesh</option>
-                        <option>Uttarakhand</option>
-                        <option>West Bengal</option>
-                        <option>Andaman and Nicobar Islands</option>
-                        <option>Chandigarh</option>
-                        <option>Dadra and Nagar Haveli and Daman and Diu</option>
-                        <option>Lakshadweep</option>
-                        <option>Delhi (National Capital Territory of Delhi)</option>
-                        <option>Puducherry</option>
-                        <option>Jammu and Kashmir</option>
-                        <option>Ladakh</option>
-                    </select>
-                </div>
-                <div class="col-md-12">
-                    <label for="inputHomeCommercial" class="form-label">Solar For Home or Commercial?</label>
-                    <select id="inputHomeCommercial" class="form-select">
-                        <option selected>Choose...</option>
-                        <option>Individual House or Villa</option>
-                        <option>Flat or Apartment</option>
-                        <option>Commercial</option>
-                    </select>
-                </div>
-                <div class="col-md-12">
-                    <label for="inputStateBill" class="form-label">Monthly Average Electricity Bill</label>
-                    <select id="inputStateBill" class="form-select">
-                        <option selected>Choose...</option>
-                        <option>Less than ₹1000</option>
-                        <option>₹1000 to ₹2000</option>
-                        <option>₹2000 to ₹5000</option>
-                        <option>More Than ₹5000</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"
-                        required></textarea>
-                </div>
-                <div class="col-12">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                            I agree with BREL's <a href="#">Terms of Service</a>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary form-submit-btn">Submit</button>
-                </div>
-            </form>
-
-        </div>
-        <div class="col-md-6">
-            <div class="form-img">
-                <img src="./assets/img/home page images/form/form-img-2.webp" alt="Form Image">
-                <!-- <p>img</p> -->
             </div>
         </div>
     </div>
+    <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resultModalLabel">Your Requirement:</h5>
+                </div>
+                <div class="modal-body">
+                    <p id="resultText"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeModal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- NEW CALCULATOR -->
+    <!-- <div class="container calculator-container p-4">
+        <form id="conversionForm">
+            <div class="mb-3">
+                <label class="form-label">Name:</label>
+                <input type="text" placeholder="Enter your name" class="form-control" id="nameInput" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Phone Number:</label>
+                <input type="tel" placeholder="Enter your phone number" class="form-control" id="phoneInput" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email Address:</label>
+                <input type="email" placeholder="Enter your email address" class="form-control" id="emailInput"
+                    required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">City:</label>
+                <input type="text" placeholder="Enter your city" class="form-control" id="cityInput" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Bill Amount:</label>
+                <input type="number" placeholder="Enter your monthly bill amount (INR)" class="form-control"
+                    id="inrInput" required>
+            </div>
+            <button class="btn calculator-submit-btn p-2" type="submit">
+                Calculate Now
+            </button>
+        </form>
+    </div>
+    <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resultModalLabel">Your Requirement:</h5>
+                </div>
+                <div class="modal-body">
+                    <p id="resultText"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeModal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- NEWER CALCULATOR -->
+    <!-- <div class="container calculator-container p-4">
+        <form id="conversionForm">
+            <div class="mb-3">
+                <label class="form-label">Name:</label>
+                <input type="text" placeholder="Enter your name" class="form-control" id="nameInput" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Phone Number:</label>
+                <input type="tel" placeholder="Enter your phone number" class="form-control" id="phoneInput" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email Address:</label>
+                <input type="email" placeholder="Enter your email address" class="form-control" id="emailInput" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">City:</label>
+                <input type="text" placeholder="Enter your city" class="form-control" id="cityInput" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Bill Amount:</label>
+                <input type="number" placeholder="Enter your monthly bill amount (INR)" class="form-control" id="inrInput"
+                    required>
+            </div>
+            <button class="btn calculator-submit-btn p-2" type="submit">
+                Calculate Now
+            </button>
+        </form>
+    </div>
+    <div class="container mt-4 p-4">
+        <div id="resultContainer">
+            <h3>Calculation Result</h3>
+            <p id="resultText"></p>
+        </div>
+    </div> -->
+
+
+
+
+
+
 
 
 
@@ -518,8 +478,7 @@
             <a href="./index.html">
                 <img class="footer-logo pb-3" src="./assets/img/logos/brel-logo-white.webp" alt="BREL" width="160px">
             </a>
-            <p class="pb-3">Power your future sustainably with our cutting-edge solar solutions, harnessing the
-                sun's
+            <p class="pb-3">Power your future sustainably with our cutting-edge solar solutions, harnessing the sun's
                 energy for a brighter tomorrow.</p>
             <div class="footer-icon-container">
                 <a class="social-icon"
@@ -590,6 +549,7 @@
     </button>
 
     <script src="./assets/scripts/script.js"></script>
+    <script src="./assets/scripts/solar-calculator-script.js"></script>
 
     <!-- Bootstrap Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -598,6 +558,27 @@
 
     <!-- Swiper Script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- <script>var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                observer: true,
+                observeParents: true,
+                breakpoints: {
+                    992: {
+                        slidesPerView: 2,
+                    }
+                }
+            });
+        </script> -->
 
 </body>
 
