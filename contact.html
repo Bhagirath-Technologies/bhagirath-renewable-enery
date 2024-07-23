@@ -158,7 +158,8 @@
                             <a class="nav-link white-text hover-light-blue p-3" href="./contact.html">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link white-text hover-light-blue p-3" href="./solar-calculator.html">Solar Calculator</a>
+                            <a class="nav-link white-text hover-light-blue p-3" href="./solar-calculator.html">Solar
+                                Calculator</a>
                         </li>
                     </ul>
                 </div>
@@ -340,48 +341,88 @@
             <h4 class="d-flex justify-content-center text-secondary-color-1 text-animation h4">| Get in Touch</h4>
             <h1 class="d-flex justify-content-center text-white text-animation h1">Contact Us</h1>
 
+            <!-- I've used 'formsubmit.co' email functionality -->
+            <form form id="contactForm" action="https://formsubmit.co/fec11824174ba3db28527c47f54a5991" method="POST"
+                class="custom-form text-white row g-3 mt-4 mb-4">
+                <!-- <form class="custom-form text-white row g-3 mt-4 mb-4" action="./assets/scripts/process_form.php" method="POST"> -->
 
-            <!-- <form class="custom-form text-white row g-3 mt-4 mb-4">
                 <div class="col-md-6">
                     <label for="inputName" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="inputName">
+                    <input type="text" name="Name" class="form-control" id="inputName">
                 </div>
                 <div class="col-md-6">
                     <label for="inputNumber" class="form-label">Phone Number</label>
-                    <input type="number" class="form-control" id="inputNumber">
+                    <input type="number" name="Number" class="form-control" id="inputNumber">
                 </div>
                 <div class="col-md-12">
                     <label for="inputEmail4" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+                    <input type="email" name="Email" class="form-control" id="inputEmail4">
                 </div>
                 <div class="col-md-12">
-                    <label for="inputStateBill" class="form-label">Monthly Electricity Bill</label>
-                    <select id="inputStateBill" class="form-select">
-                        <option selected>Choose...</option>
-                        <option>Less Than ₹2000</option>
-                        <option>₹2000 to ₹5000</option>
-                        <option>₹5000 to ₹8000</option>
-                        <option>More Than ₹8000</option>
-                    </select>
-                </div>
-                <div class="col-12">
-                    <label for="inputAddress" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputCity" class="form-label">City</label>
-                    <input type="text" class="form-control" id="inputCity">
-                </div>
-                <div class="col-md-4">
                     <label for="inputState" class="form-label">State</label>
-                    <select id="inputState" class="form-select">
+                    <select id="inputState" name="State" class="form-select">
                         <option selected>Choose...</option>
-                        <option>...</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh</option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                        <option>Chhattisgarh</option>
+                        <option>Goa</option>
+                        <option>Gujarat</option>
+                        <option>Haryana</option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Maharashtra</option>
+                        <option>Manipur</option>
+                        <option>Meghalaya</option>
+                        <option>Mizoram</option>
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
+                        <option>Punjab</option>
+                        <option>Rajasthan</option>
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu</option>
+                        <option>Telangana</option>
+                        <option>Tripura</option>
+                        <option>Uttar Pradesh</option>
+                        <option>Uttarakhand</option>
+                        <option>West Bengal</option>
+                        <option>Andaman and Nicobar Islands</option>
+                        <option>Chandigarh</option>
+                        <option>Dadra and Nagar Haveli and Daman and Diu</option>
+                        <option>Lakshadweep</option>
+                        <option>Delhi (National Capital Territory of Delhi)</option>
+                        <option>Puducherry</option>
+                        <option>Jammu and Kashmir</option>
+                        <option>Ladakh</option>
                     </select>
                 </div>
-                <div class="col-md-2">
-                    <label for="inputZip" class="form-label">Zip</label>
-                    <input type="text" class="form-control" id="inputZip">
+                <div class="col-md-12">
+                    <label for="inputHomeCommercial" class="form-label">Solar For Home or Commercial?</label>
+                    <select id="inputHomeCommercial" name="Home-or-Commercial" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>Individual House or Villa</option>
+                        <option>Flat or Apartment</option>
+                        <option>Commercial</option>
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <label for="inputStateBill" class="form-label">Monthly Average Electricity Bill</label>
+                    <select id="inputStateBill" name="Monthly-Average-Electricity-Bill" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>Less than ₹1000</option>
+                        <option>₹1000 to ₹2000</option>
+                        <option>₹2000 to ₹5000</option>
+                        <option>More Than ₹5000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="Message" rows="4" placeholder="Enter your message"
+                        required></textarea>
                 </div>
                 <div class="col-12">
                     <div class="form-check">
@@ -392,11 +433,23 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary form-submit-btn">Submit</button>
+                    <button type="submit" class="btn btn-primary form-submit-btn" id="submitButton"
+                        disabled>Submit</button>
                 </div>
-            </form> -->
+            </form>
+        </div>
+        <div class="col-md-6">
+            <div class="form-img">
+                <img src="./assets/img/home page images/form/form-img-2.webp" alt="Form Image">
+            </div>
+        </div>
+    </div>
 
-
+    <!-- FORM BACKUP -->
+    <!-- <div class="row no-gutters form-container pt-5 pt-xxl-7 pb-5 pb-xxl-7 px-2">
+        <div class="col-md-6 d-flex flex-column align-items-center">
+            <h4 class="d-flex justify-content-center text-secondary-color-1 text-animation h4">| Get in Touch</h4>
+            <h1 class="d-flex justify-content-center text-white text-animation h1">Contact Us</h1>
             <form class="custom-form text-white row g-3 mt-4 mb-4">
                 <div class="col-md-6">
                     <label for="inputName" class="form-label">Full Name</label>
@@ -488,29 +541,13 @@
                     <button type="submit" class="btn btn-primary form-submit-btn">Submit</button>
                 </div>
             </form>
-
         </div>
         <div class="col-md-6">
             <div class="form-img">
                 <img src="./assets/img/home page images/form/form-img-2.webp" alt="Form Image">
-                <!-- <p>img</p> -->
             </div>
         </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div> -->
 
     <!-- FOOTER -->
     <footer class="footer">

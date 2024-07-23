@@ -109,7 +109,7 @@ backToTopBtn.onclick = function () {
 //-------------ABOUT PAGE - OUR PRODUCTS------------
 //==================================================
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const tabs = document.querySelectorAll('#product-tabs .nav-link');
     const productTitle = document.getElementById('product-title');
     const productDescription = document.getElementById('product-description');
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     tabs.forEach(tab => {
-        tab.addEventListener('click', function(event) {
+        tab.addEventListener('click', function (event) {
             event.preventDefault();
             tabs.forEach(t => t.classList.remove('active'));
             this.classList.add('active');
@@ -148,7 +148,6 @@ document.addEventListener('DOMContentLoaded', function() {
 //-------------NEW CAROUSEL-------------
 //======================================
 
-
 document.addEventListener('DOMContentLoaded', function () {
     var carousel = document.getElementById('carouselExampleIndicators');
     var carouselListItems = document.querySelectorAll('#carousel-list-div .carousel-list-item-container');
@@ -165,4 +164,21 @@ document.addEventListener('DOMContentLoaded', function () {
         // Add active class to the corresponding list item
         carouselListItems[slideIndex].classList.add('active');
     });
+});
+
+//=====================================================================
+//-------------VALIDATING FORMS (TICKING TERMS OF SERVICE)-------------
+//=====================================================================
+
+document.getElementById("gridCheck").addEventListener('change', function () {
+    var submitButton = document.getElementById("submitButton");
+    submitButton.disabled = !this.checked;
+});
+
+document.getElementById("contactForm").addEventListener('submit', function (event) {
+    var checkBox = document.getElementById("gridCheck");
+    if (!checkBox.checked) {
+        alert("Please agree to the Terms of Service.");
+        event.preventDefault(); // Prevent form submission
+    }
 });
