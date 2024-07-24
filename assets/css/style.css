@@ -3024,3 +3024,7 @@
 .colored-link>a {
     color: var(--secondary-color);
 }
+
+.max-width-600 {
+    max-width: 600px;
+}
