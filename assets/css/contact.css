@@ -136,3 +136,8 @@
 /* .contact-details-comp-1-text:hover {
     color: var(--light-color);
 } */
+
+.link-text {
+    text-decoration: none;
+    color: var(--secondary-color);
+}

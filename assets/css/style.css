@@ -3,6 +3,7 @@
     --primary-color: #023E8A;
     --secondary-color: #0077B6;
     --light-color: #CAF0F8;
+    --mid-light-color: #90cdd9;
     --mid-dark-color: #0b131f;
     --high-dark-color: #080e16;
     --logo-color-primary: #0e3f61;
@@ -2348,6 +2349,11 @@
     color: var(--white) !important;
 }
 
+.form-submit-btn:disabled {
+    background-color: var(--light-color);
+    color: var(--secondary-color);
+}
+
 .form-submit-btn-2 {
     background-color: var(--secondary-color);
     color: var(--white);
@@ -2359,6 +2365,10 @@
 .form-submit-btn-2:hover {
     background-color: var(--primary-color);
     color: var(--white) !important;
+}
+
+.form-submit-btn-2:disabled {
+    background-color: var(--mid-light-color);
 }
 
 /* STATS */
@@ -3009,4 +3019,8 @@
 .no-spinner::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.colored-link>a {
+    color: var(--secondary-color);
 }

@@ -158,7 +158,8 @@
                             <a class="nav-link white-text hover-light-blue p-3" href="./contact.html">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link white-text hover-light-blue p-3" href="./solar-calculator.html">Solar Calculator</a>
+                            <a class="nav-link white-text hover-light-blue p-3" href="./solar-calculator.html">Solar
+                                Calculator</a>
                         </li>
                     </ul>
                 </div>
@@ -167,6 +168,7 @@
                 data-bs-target="#quoteModal">
                 Get a Quote
             </button>
+
             <!-- MODAL -->
             <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -176,19 +178,22 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form class="custom-form-2 row g-3">
+                            <!-- <form class="custom-form-2 row g-3"> -->
+                            <form form id="contactFormModal"
+                                action="https://formsubmit.co/fec11824174ba3db28527c47f54a5991" method="POST"
+                                class="custom-form-2 row g-3">
                                 <div class="col-md-6">
                                     <label for="inputName" class="form-label">Full Name <span
                                             class="required-asterisk">*</span></label>
-                                    <input type="text" class="form-control" id="inputName" placeholder="Full name"
-                                        required>
+                                    <input type="text" name="Name" class="form-control" id="inputName"
+                                        placeholder="Full name" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputNumber" class="form-label">Phone Number <span
                                             class="required-asterisk">*</span></label>
                                     <div class="input-group">
-                                        <input type="number" class="form-control no-spinner" id="inputNumber"
-                                            placeholder="Phone number" inputmode="numeric" required>
+                                        <input type="number" name="Number" class="form-control no-spinner"
+                                            id="inputNumber" placeholder="Phone number" inputmode="numeric" required>
                                         <span class="input-group-text">
                                             <img src="./assets/img/home page images/indian-flag.webp" alt="Indian Flag"
                                                 class="flag-icon">
@@ -198,13 +203,13 @@
                                 <div class="col-md-12">
                                     <label for="inputEmail4" class="form-label">Email Address <span
                                             class="required-asterisk">*</span></label>
-                                    <input type="email" class="form-control" id="inputEmail4"
+                                    <input type="email" name="Email" class="form-control" id="inputEmail4"
                                         placeholder="Email address" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for="inputState" class="form-label">State <span
                                             class="required-asterisk">*</span></label>
-                                    <select id="inputState" class="form-select" required>
+                                    <select id="inputState" name="State" class="form-select" required>
                                         <option value="" selected disabled>Choose...</option>
                                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                                         <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -249,7 +254,8 @@
                                 <div class="col-md-12">
                                     <label for="inputHomeCommercial" class="form-label">Solar For Home or Commercial?
                                         <span class="required-asterisk">*</span></label>
-                                    <select id="inputHomeCommercial" class="form-select" required>
+                                    <select id="inputHomeCommercial" name="Home-or-Commercial" class="form-select"
+                                        required>
                                         <option value="" selected disabled>Choose...</option>
                                         <option value="Individual House or Villa">Individual House or Villa</option>
                                         <option value="Flat or Apartment">Flat or Apartment</option>
@@ -259,7 +265,8 @@
                                 <div class="col-md-12">
                                     <label for="inputStateBill" class="form-label">Monthly Average Electricity Bill
                                         <span class="required-asterisk">*</span></label>
-                                    <select id="inputStateBill" class="form-select" required>
+                                    <select id="inputStateBill" name="Monthly-Average-Electricity-Bill"
+                                        class="form-select" required>
                                         <option value="" selected disabled>Choose...</option>
                                         <option value="Less than ₹1000">Less than ₹1000</option>
                                         <option value="₹1000 to ₹2000">₹1000 to ₹2000</option>
@@ -267,15 +274,27 @@
                                         <option value="More Than ₹5000">More Than ₹5000</option>
                                     </select>
                                 </div>
+                                <!-- <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheckModal">
+                                        <label class="form-check-label colored-link" for="gridCheckModal">
+                                            I agree with BREL's <a href="#" class="colored-heading">Terms of Service</a>
+                                        </label>
+                                    </div>
+                                </div> -->
+                                <input type="hidden" name="_next"
+                                    value="https://shayaankn.github.io/brel-website/thanks.html">
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary form-submit-btn-2 mt-2">Submit</button>
+                                    <!-- <button type="submit" class="btn btn-primary form-submit-btn-2 mt-2"
+                                        id="submitButtonModal" disabled>Submit</button> -->
+                                    <button type="submit" class="btn btn-primary form-submit-btn-2 mt-2"
+                                        id="submitButtonModal">Submit</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-
 
 
         </div>
@@ -571,7 +590,7 @@
         <p class="text-center light-text pt-2">There are two ways/models to get a solar power system installed at your
             home, business,
             institute, and industry:</p>
-        <p class="text-center">CAPEX Modal (One Time Investment) and OPEX or PPA Model</p>
+        <p class="text-center">CAPEX Model (One Time Investment) and OPEX or PPA Model</p>
         <!-- CARDS -->
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
@@ -609,7 +628,7 @@
                             and your
                             company’s credit rating. If you want to install a solar system with more than 100kW capacity
                             for
-                            your institute, business, or industry, the OPEX modal will be the best option.</p>
+                            your institute, business, or industry, the OPEX model will be the best option.</p>
                         <p class="card-text light-text justified-text">You might not want to build your own solar system
                             with millions of
                             investments. Instead of this, buying the electricity produced by the solar system at less
@@ -621,43 +640,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- CARD 1 -->
-        <!-- <div class="row">
-            <div class="col-md-8">
-                <h4 class="h4 text-animation">CAPEX Model (One Time Investment)</h4>
-                <p class="light-text justified-text">In the CAPEX model, capital expenditure will be all yours. You will
-                    have to pay the complete system’s cost to the solar system installation company in one shot. The
-                    power plant installed in this way will be your own system. You will be get benefited from free
-                    electricity for the next 25+ years. The CAPEX model will be best for you when you are planning to
-                    install a 100kW or less capacity solar system for your home or business.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="./assets/img/brel resco page 2 images/section-1-img.webp" alt="Solar Panel Diagram"
-                    class="img-fluid p-md-4">
-            </div>
-        </div> -->
-        <!-- CARD 2 -->
-        <!-- <div class="row">
-            <div class="col-md-8">
-                <h4 class="h4 text-animation">OPEX Model (PPA)</h4>
-                <p class="light-text justified-text">In the OPEX model, only operation expenditure will be yours. A
-                    solar system installation company will install the complete solar system at their own cost on your
-                    rooftop through a 10-25 year Power Purchase Agreement (PPA) between you and the installation
-                    company. After the installation, you just need to pay per unit (less than the regular grid price) on
-                    a monthly basis. The PPA rates (Rs.3 to Rs.7) depend on your installation size, PPA period, and your
-                    company’s credit rating. If you want to install a solar system with more than 100kW capacity for
-                    your institute, business, or industry, the OPEX modal will be the best option.</p>
-                <p class="light-text justified-text">You might not want to build your own solar system with millions of
-                    investments. Instead of this, buying the electricity produced by the solar system at less prices
-                    will be the best alternative. In this way, you don’t have to pay the upfront costs, construction
-                    costs, and maintenance costs.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="./assets/img/brel resco page 2 images/section-1-img.webp" alt="Solar Panel Diagram"
-                    class="img-fluid p-md-4">
-            </div>
-        </div> -->
     </div>
 
     <!-- SECTION 9 -->

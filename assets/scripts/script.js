@@ -170,6 +170,28 @@ document.addEventListener('DOMContentLoaded', function () {
 //-------------VALIDATING FORMS (TICKING TERMS OF SERVICE)-------------
 //=====================================================================
 
+// function setupFormValidation(checkboxId, submitButtonId, formId) {
+//     var checkBox = document.getElementById(checkboxId);
+//     var submitButton = document.getElementById(submitButtonId);
+//     var form = document.getElementById(formId);
+
+//     checkBox.addEventListener('change', function () {
+//         submitButton.disabled = !this.checked;
+//     });
+
+//     form.addEventListener('submit', function (event) {
+//         if (!checkBox.checked) {
+//             alert("Please agree to the Terms of Service.");
+//             event.preventDefault(); // Prevent form submission
+//         }
+//     });
+// }
+
+// setupFormValidation("gridCheck", "submitButton", "contactForm");
+// setupFormValidation("gridCheckModal", "submitButtonModal", "contactFormModal");
+
+// OLDER VERSION OF THE ABOVE SCRIPT
+
 document.getElementById("gridCheck").addEventListener('change', function () {
     var submitButton = document.getElementById("submitButton");
     submitButton.disabled = !this.checked;
@@ -182,3 +204,18 @@ document.getElementById("contactForm").addEventListener('submit', function (even
         event.preventDefault(); // Prevent form submission
     }
 });
+
+// // Same code for the modal
+
+// document.getElementById("gridCheckModal").addEventListener('change', function () {
+//     var submitButtonModal = document.getElementById("submitButtonModal");
+//     submitButtonModal.disabled = !this.checked;
+// });
+
+// document.getElementById("contactFormModal").addEventListener('submit', function (event) {
+//     var checkBoxModal = document.getElementById("gridCheckModal");
+//     if (!checkBoxModal.checked) {
+//         alert("Please agree to the Terms of Service.");
+//         event.preventDefault(); // Prevent form submission
+//     }
+// });

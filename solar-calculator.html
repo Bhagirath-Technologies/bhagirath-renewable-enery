@@ -168,7 +168,6 @@
                 Get a Quote
             </button>
 
-
             <!-- MODAL -->
             <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -178,19 +177,22 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form class="custom-form-2 row g-3">
+                            <!-- <form class="custom-form-2 row g-3"> -->
+                            <form form id="contactFormModal"
+                                action="https://formsubmit.co/fec11824174ba3db28527c47f54a5991" method="POST"
+                                class="custom-form-2 row g-3">
                                 <div class="col-md-6">
                                     <label for="inputName" class="form-label">Full Name <span
                                             class="required-asterisk">*</span></label>
-                                    <input type="text" class="form-control" id="inputName" placeholder="Full name"
-                                        required>
+                                    <input type="text" name="Name" class="form-control" id="inputName"
+                                        placeholder="Full name" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputNumber" class="form-label">Phone Number <span
                                             class="required-asterisk">*</span></label>
                                     <div class="input-group">
-                                        <input type="number" class="form-control no-spinner" id="inputNumber"
-                                            placeholder="Phone number" inputmode="numeric" required>
+                                        <input type="number" name="Number" class="form-control no-spinner"
+                                            id="inputNumber" placeholder="Phone number" inputmode="numeric" required>
                                         <span class="input-group-text">
                                             <img src="./assets/img/home page images/indian-flag.webp" alt="Indian Flag"
                                                 class="flag-icon">
@@ -200,13 +202,13 @@
                                 <div class="col-md-12">
                                     <label for="inputEmail4" class="form-label">Email Address <span
                                             class="required-asterisk">*</span></label>
-                                    <input type="email" class="form-control" id="inputEmail4"
+                                    <input type="email" name="Email" class="form-control" id="inputEmail4"
                                         placeholder="Email address" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for="inputState" class="form-label">State <span
                                             class="required-asterisk">*</span></label>
-                                    <select id="inputState" class="form-select" required>
+                                    <select id="inputState" name="State" class="form-select" required>
                                         <option value="" selected disabled>Choose...</option>
                                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                                         <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -251,7 +253,8 @@
                                 <div class="col-md-12">
                                     <label for="inputHomeCommercial" class="form-label">Solar For Home or Commercial?
                                         <span class="required-asterisk">*</span></label>
-                                    <select id="inputHomeCommercial" class="form-select" required>
+                                    <select id="inputHomeCommercial" name="Home-or-Commercial" class="form-select"
+                                        required>
                                         <option value="" selected disabled>Choose...</option>
                                         <option value="Individual House or Villa">Individual House or Villa</option>
                                         <option value="Flat or Apartment">Flat or Apartment</option>
@@ -261,7 +264,8 @@
                                 <div class="col-md-12">
                                     <label for="inputStateBill" class="form-label">Monthly Average Electricity Bill
                                         <span class="required-asterisk">*</span></label>
-                                    <select id="inputStateBill" class="form-select" required>
+                                    <select id="inputStateBill" name="Monthly-Average-Electricity-Bill"
+                                        class="form-select" required>
                                         <option value="" selected disabled>Choose...</option>
                                         <option value="Less than ₹1000">Less than ₹1000</option>
                                         <option value="₹1000 to ₹2000">₹1000 to ₹2000</option>
@@ -269,15 +273,27 @@
                                         <option value="More Than ₹5000">More Than ₹5000</option>
                                     </select>
                                 </div>
+                                <!-- <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheckModal">
+                                        <label class="form-check-label colored-link" for="gridCheckModal">
+                                            I agree with BREL's <a href="#" class="colored-heading">Terms of Service</a>
+                                        </label>
+                                    </div>
+                                </div> -->
+                                <input type="hidden" name="_next"
+                                    value="https://shayaankn.github.io/brel-website/thanks.html">
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary form-submit-btn-2 mt-2">Submit</button>
+                                    <!-- <button type="submit" class="btn btn-primary form-submit-btn-2 mt-2"
+                                        id="submitButtonModal" disabled>Submit</button> -->
+                                    <button type="submit" class="btn btn-primary form-submit-btn-2 mt-2"
+                                        id="submitButtonModal">Submit</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-
 
 
         </div>
@@ -310,9 +326,9 @@
                 <div class="input-group mb-3">
                     <span class="input-group-text bg-secondary-color text-white" id="priceIcon">
                         <!-- <div id="div-system-price"> -->
-                            <span class="material-symbols-outlined">
-                                currency_rupee
-                            </span>
+                        <span class="material-symbols-outlined">
+                            currency_rupee
+                        </span>
                         <!-- </div> -->
                     </span>
                     <input type="number" class="form-control" id="billInput" aria-describedby="emailHelp">
@@ -375,14 +391,14 @@
             potential benefits of installing solar energy systems based on your specific energy consumption. By
             inputting your monthly electricity bill amount in Indian Rupees (INR), the calculator provides insights into
             various aspects of solar energy adoption:</p>
-        <p class="light-text justified-text px-3 pt-4"><strong>1. System Size:</strong> Calculates the recommended solar
+        <p class="light-text justified-text px-3 pt-4"><strong>1. System Size: </strong>Calculates the recommended solar
             panel capacity in kilowatts (kW) needed to meet your energy requirements.</p>
-        <p class="light-text justified-text px-3 pt-4"><strong>2. Price:</strong> Estimates the approximate cost of
+        <p class="light-text justified-text px-3 pt-4"><strong>2. Price: </strong>Estimates the approximate cost of
             installing a solar energy system based on the input bill amount.</p>
-        <p class="light-text justified-text px-3 pt-4"><strong>3. Annual Savings:</strong> Projects the potential
+        <p class="light-text justified-text px-3 pt-4"><strong>3. Annual Savings: </strong>Projects the potential
             savings you could achieve annually by switching to solar energy, assuming typical savings based on the
             entered monthly bill.</p>
-        <p class="light-text justified-text px-3 pt-4"><strong>4. Energy Generated:</strong> Provides an estimate of the
+        <p class="light-text justified-text px-3 pt-4"><strong>4. Energy Generated: </strong>Provides an estimate of the
             electricity units (kWh) that your solar system could generate per month, contributing to energy independence
             and sustainability.</p>
         <p class="light-text justified-text px-3 py-4">Using accurate calculations and industry standards, a Solar
