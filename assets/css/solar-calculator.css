@@ -86,27 +86,6 @@
     margin: 0 5px;
 }
 
-/* MAIN SECTION */
-
-/* .calculator-submit-btn {
-    border-radius: 5px;
-    font-size: 1rem;
-    color: var(--white);
-    background-color: var(--secondary-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.calculator-submit-btn:hover {
-    color: var(--white);
-    background-color: var(--secondary-color);
-}
-
-@media (min-width: 768px) {
-    .calculator-container {
-        max-width: 60%;
-    }
-} */
-
 /* CALCULATOR */
 
 .calculator-container {
@@ -141,4 +120,15 @@
 #priceIcon {
     border: none;
     cursor: default;
+}
+
+#usageType {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+}
+
+#usageType>option {
+    background-color: var(--white);
+    color: var(--primary-color);
 }

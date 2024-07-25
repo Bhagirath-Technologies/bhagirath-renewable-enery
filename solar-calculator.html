@@ -322,22 +322,19 @@
             <div class="mb-3">
                 <label for="billInput" class="form-label">Enter your monthly electricity bill (in INR):</label>
                 <!-- <input type="number" class="form-control" id="billInput" aria-describedby="emailHelp"> -->
-
                 <div class="input-group mb-3">
                     <span class="input-group-text bg-secondary-color text-white" id="priceIcon">
-                        <!-- <div id="div-system-price"> -->
                         <span class="material-symbols-outlined">
                             currency_rupee
                         </span>
-                        <!-- </div> -->
                     </span>
                     <input type="number" class="form-control" id="billInput" aria-describedby="emailHelp">
+                    <select class="form-select" id="usageType">
+                        <option value="home" selected>Home</option>
+                        <option value="commercial">Commercial</option>
+                    </select>
                 </div>
-
             </div>
-
-
-
 
             <div class="row no-gutters">
                 <div class="col-md-6 p-2">

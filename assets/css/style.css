@@ -2215,7 +2215,7 @@
 }
 
 .services-container-card-text {
-    color: gray;
+    color: var(--black);
     margin-bottom: 20px;
     text-align: left;
 }
