@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookies Policy | Bhagirath Renewable Energy Private Limited</title>
+    <title>Careers | Bhagirath Renewable Energy Private Limited</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/contact.css">
+    <link rel="stylesheet" href="./assets/css/careers.css">
 
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -104,7 +104,6 @@
                 data-bs-target="#quoteModal">
                 Get a Quote
             </button>
-
             <button class="navbar-toggler navbar-toggler-2 custom-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
                 <span class="material-symbols-outlined toggler-icon-2">
@@ -178,7 +177,6 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <!-- <form class="custom-form-2 row g-3"> -->
                             <form form id="contactFormModal"
                                 action="https://formsubmit.co/fec11824174ba3db28527c47f54a5991" method="POST"
                                 class="custom-form-2 row g-3">
@@ -274,19 +272,9 @@
                                         <option value="More Than ₹5000">More Than ₹5000</option>
                                     </select>
                                 </div>
-                                <!-- <div class="col-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheckModal">
-                                        <label class="form-check-label colored-link" for="gridCheckModal">
-                                            I agree with BREL's <a href="#" class="colored-heading">Terms of Service</a>
-                                        </label>
-                                    </div>
-                                </div> -->
                                 <input type="hidden" name="_next"
                                     value="https://shayaankn.github.io/brel-website/thanks.html">
                                 <div class="col-12">
-                                    <!-- <button type="submit" class="btn btn-primary form-submit-btn-2 mt-2"
-                                        id="submitButtonModal" disabled>Submit</button> -->
                                     <button type="submit" class="btn btn-primary form-submit-btn-2 mt-2"
                                         id="submitButtonModal">Submit</button>
                                 </div>
@@ -300,15 +288,94 @@
         </div>
     </nav>
 
-    <!-- TERMS -->
-     <div class="container py-4 px-2 max-width-600">
-        <h2 class="h2 text-center pb-2">Cookies Policy</h2>
-        <p class="light-text justified-text">Our website uses cookies to improve your experience. By using our website, you consent to the use of cookies in accordance with this policy.</p>
-        <p class="light-text justified-text">Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>
+    <!-- HERO SECTION (CAREERS) -->
+    <div class="container-fluid p-0">
+        <div class="careers-hero-section dark-overlay-50">
+            <div class="careers-hero-content">
+                <h1 class="bold-text">Careers</h1>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                    <li class="breadcrumb-separator">/</li>
+                    <li class="breadcrumb-item active">Careers</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-        <h5 class="h5">Disclaimer</h5>
-        <p class="light-text justified-text">To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website.</p>
-     </div>
+    <!-- MAIN SECTION -->
+    <div class="container py-4 px-2">
+        <h5 class="text-center colored-heading text-animation h5">| CAREERS</h5>
+        <h1 class="text-center text-animation h1 pb-2">Current Openings</h1>
+        <p class="text-center pb-2">Sorry, we currently have no vacancies available. Keep in touch to stay updated on future opportunities.</p>
+        <!-- TABLE -->
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th class="text-center">Job Title</th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center">Test Vacancy</td>
+                    <!-- <td class="text-center"><a href="#" class="btn apply-btn">Apply</a></td> -->
+                    <td class="text-center"><a href="#" class="btn apply-btn" data-bs-toggle="modal"
+                            data-bs-target="#applyModal">Apply</a></td>
+                </tr>
+                <tr>
+                    <td class="text-center">Test Vacancy</td>
+                    <td class="text-center"><a href="#" class="btn apply-btn" data-bs-toggle="modal"
+                            data-bs-target="#applyModal">Apply</a></td>
+                </tr>
+                <tr>
+                    <td class="text-center">Test Vacancy</td>
+                    <td class="text-center"><a href="#" class="btn apply-btn" data-bs-toggle="modal"
+                            data-bs-target="#applyModal">Apply</a></td>
+                </tr>
+                <tr>
+                    <td class="text-center">Test Vacancy</td>
+                    <td class="text-center"><a href="#" class="btn apply-btn" data-bs-toggle="modal"
+                            data-bs-target="#applyModal">Apply</a></td>
+                </tr>
+                <tr>
+                    <td class="text-center">Test Vacancy</td>
+                    <td class="text-center"><a href="#" class="btn apply-btn" data-bs-toggle="modal"
+                            data-bs-target="#applyModal">Apply</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- APPLY MODAL -->
+    <!-- Modal Structure -->
+    <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="applyModalLabel">Apply for Job</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Your form here -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="resume" class="form-label">Resume</label>
+                            <input type="file" class="form-control" id="resume" required>
+                        </div>
+                        <button type="submit" class="btn submit-application-btn">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- FOOTER -->
