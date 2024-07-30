@@ -91,78 +91,38 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-//======================================
-//-------------NEW CAROUSEL-------------
-//======================================
+//======================================================
+//-----------FORM SUBMIT (Google Apps Script)-----------
+//======================================================
 
-document.addEventListener('DOMContentLoaded', function () {
-    var carousel = document.getElementById('carouselExampleIndicators');
-    var carouselListItems = document.querySelectorAll('#carousel-list-div .carousel-list-item-container');
+async function submitForm(event) {
+    event.preventDefault(); // Prevent the default form submission
 
-    carousel.addEventListener('slide.bs.carousel', function (event) {
-        // Get the index of the active slide
-        var slideIndex = event.to;
+    const formData = new FormData(document.getElementById('contactForm'));
+    const formObject = Object.fromEntries(formData.entries());
 
-        // Remove active class from all list items
-        carouselListItems.forEach(function (item) {
-            item.classList.remove('active');
+    try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbz1-HIWjyAWUwRbqosOzBcbM7SkXrxgGMCbOx3wHTIMKFDpEC4iAdyc5jIzZ0vm7vU1/exec', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formObject),
+            mode: 'cors', // Enable CORS
+            credentials: 'same-origin' // Include credentials if needed
         });
 
-        // Add active class to the corresponding list item
-        carouselListItems[slideIndex].classList.add('active');
-    });
-});
-
-//=====================================================================
-//-------------VALIDATING FORMS (TICKING TERMS OF SERVICE)-------------
-//=====================================================================
-
-// function setupFormValidation(checkboxId, submitButtonId, formId) {
-//     var checkBox = document.getElementById(checkboxId);
-//     var submitButton = document.getElementById(submitButtonId);
-//     var form = document.getElementById(formId);
-
-//     checkBox.addEventListener('change', function () {
-//         submitButton.disabled = !this.checked;
-//     });
-
-//     form.addEventListener('submit', function (event) {
-//         if (!checkBox.checked) {
-//             alert("Please agree to the Terms of Service.");
-//             event.preventDefault(); // Prevent form submission
-//         }
-//     });
-// }
-
-// setupFormValidation("gridCheck", "submitButton", "contactForm");
-// setupFormValidation("gridCheckModal", "submitButtonModal", "contactFormModal");
-
-// OLDER VERSION OF THE ABOVE SCRIPT
-
-    document.getElementById("gridCheck").addEventListener('change', function () {
-        var submitButton = document.getElementById("submitButton");
-        submitButton.disabled = !this.checked;
-    });
-
-    document.getElementById("contactForm").addEventListener('submit', function (event) {
-        var checkBox = document.getElementById("gridCheck");
-        if (!checkBox.checked) {
-            alert("Please agree to the Terms of Service.");
-            event.preventDefault(); // Prevent form submission
+        if (response.ok) {
+            alert('Form submitted successfully!');
+            document.getElementById('contactForm').reset(); // Optionally reset the form
+        } else {
+            // Log response details for debugging
+            const responseText = await response.text();
+            console.error('Error response:', responseText);
+            alert('There was an error submitting the form. Check the console for details.');
         }
-    });
-
-// // Same code for the modal
-
-// document.getElementById("gridCheckModal").addEventListener('change', function () {
-//     var submitButtonModal = document.getElementById("submitButtonModal");
-//     submitButtonModal.disabled = !this.checked;
-// });
-
-// document.getElementById("contactFormModal").addEventListener('submit', function (event) {
-//     var checkBoxModal = document.getElementById("gridCheckModal");
-//     if (!checkBoxModal.checked) {
-//         alert("Please agree to the Terms of Service.");
-//         event.preventDefault(); // Prevent form submission
-//     }
-// });
+    } catch (error) {
+        console.error('Fetch error:', error);
+        alert('There was an error submitting the form.');
+    }
+}
