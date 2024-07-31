@@ -178,22 +178,19 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <!-- <form class="custom-form-2 row g-3"> -->
-                            <form form id="contactFormModal"
-                                action="https://formsubmit.co/fec11824174ba3db28527c47f54a5991" method="POST"
-                                class="custom-form-2 row g-3">
+                            <form id="contactFormModal" class="custom-form-2 row g-3">
                                 <div class="col-md-6">
                                     <label for="inputName" class="form-label">Full Name <span
                                             class="required-asterisk">*</span></label>
-                                    <input type="text" name="Name" class="form-control" id="inputName"
-                                        placeholder="Full name" required>
+                                    <input type="text" name="name" class="form-control" id="inputName"
+                                        placeholder="Full Name" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputNumber" class="form-label">Phone Number <span
                                             class="required-asterisk">*</span></label>
                                     <div class="input-group">
-                                        <input type="number" name="Number" class="form-control no-spinner"
-                                            id="inputNumber" placeholder="Phone number" inputmode="numeric" required>
+                                        <input type="number" name="phone" class="form-control no-spinner"
+                                            id="inputNumber" placeholder="Phone Number" inputmode="numeric" required>
                                         <span class="input-group-text">
                                             <img src="./assets/img/home page images/indian-flag.webp" alt="Indian Flag"
                                                 class="flag-icon">
@@ -201,15 +198,15 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <label for="inputEmail4" class="form-label">Email Address <span
+                                    <label for="inputEmail" class="form-label">Email Address <span
                                             class="required-asterisk">*</span></label>
-                                    <input type="email" name="Email" class="form-control" id="inputEmail4"
-                                        placeholder="Email address" required>
+                                    <input type="email" name="email" class="form-control" id="inputEmail"
+                                        placeholder="Email Address" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for="inputState" class="form-label">State <span
                                             class="required-asterisk">*</span></label>
-                                    <select id="inputState" name="State" class="form-select" required>
+                                    <select id="inputState" name="state" class="form-select" required>
                                         <option value="" selected disabled>Choose...</option>
                                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                                         <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -254,7 +251,7 @@
                                 <div class="col-md-12">
                                     <label for="inputHomeCommercial" class="form-label">Solar For Home or Commercial?
                                         <span class="required-asterisk">*</span></label>
-                                    <select id="inputHomeCommercial" name="Home-or-Commercial" class="form-select"
+                                    <select id="inputHomeCommercial" name="homeOrCommercial" class="form-select"
                                         required>
                                         <option value="" selected disabled>Choose...</option>
                                         <option value="Individual House or Villa">Individual House or Villa</option>
@@ -265,8 +262,8 @@
                                 <div class="col-md-12">
                                     <label for="inputStateBill" class="form-label">Monthly Average Electricity Bill
                                         <span class="required-asterisk">*</span></label>
-                                    <select id="inputStateBill" name="Monthly-Average-Electricity-Bill"
-                                        class="form-select" required>
+                                    <select id="inputStateBill" name="monthlyAverageElectricityBill" class="form-select"
+                                        required>
                                         <option value="" selected disabled>Choose...</option>
                                         <option value="Less than ₹1000">Less than ₹1000</option>
                                         <option value="₹1000 to ₹2000">₹1000 to ₹2000</option>
@@ -274,21 +271,10 @@
                                         <option value="More Than ₹5000">More Than ₹5000</option>
                                     </select>
                                 </div>
-                                <!-- <div class="col-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheckModal">
-                                        <label class="form-check-label colored-link" for="gridCheckModal">
-                                            I agree with BREL's <a href="#" class="colored-heading">Terms of Service</a>
-                                        </label>
-                                    </div>
-                                </div> -->
-                                <input type="hidden" name="_next"
-                                    value="https://shayaankn.github.io/brel-website/thanks.html">
+                                <input type="hidden" name="formType" value="Get a Quote">
                                 <div class="col-12">
-                                    <!-- <button type="submit" class="btn btn-primary form-submit-btn-2 mt-2"
-                                        id="submitButtonModal" disabled>Submit</button> -->
-                                    <button type="submit" class="btn btn-primary form-submit-btn-2 mt-2"
-                                        id="submitButtonModal">Submit</button>
+                                    <input type="submit" id="submitButtonGetQuote"
+                                        class="btn btn-primary form-submit-btn-2 mt-2">
                                 </div>
                             </form>
                         </div>
@@ -301,20 +287,43 @@
     </nav>
 
     <!-- TERMS -->
-     <div class="container py-4 px-2 max-width-600">
+    <div class="container py-4 px-2 max-width-600">
         <h2 class="h2 text-center pb-2">Terms and Conditions</h2>
-        <p class="light-text justified-text">Welcome to BREL! These terms and conditions outline the rules and regulations for the use of BREL's website.</p>
-        <p class="light-text justified-text">By accessing this website, we assume you accept these terms and conditions. Do not continue to use BREL's website if you do not agree to all of the terms and conditions stated on this page.</p>
+        <p class="light-text justified-text">Welcome to BREL! These terms and conditions outline the rules and
+            regulations for the use of BREL's website.</p>
+        <p class="light-text justified-text">By accessing this website, we assume you accept these terms and conditions.
+            Do not continue to use BREL's website if you do not agree to all of the terms and conditions stated on this
+            page.</p>
         <h5 class="h5">License</h5>
-        <p class="light-text justified-text">The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of [Country]. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
-        <p class="light-text justified-text">We employ the use of cookies. By accessing BREL's website, you agreed to use cookies in agreement with the BREL's Privacy Policy.</p>
-        <p class="light-text justified-text">Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>
+        <p class="light-text justified-text">The following terminology applies to these Terms and Conditions, Privacy
+            Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log
+            on this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves", "We", "Our"
+            and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All
+            terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our
+            assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s
+            needs in respect of provision of the Company’s stated services, in accordance with and subject to,
+            prevailing law of [Country]. Any use of the above terminology or other words in the singular, plural,
+            capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
+        <p class="light-text justified-text">We employ the use of cookies. By accessing BREL's website, you agreed to
+            use cookies in agreement with the BREL's Privacy Policy.</p>
+        <p class="light-text justified-text">Most interactive websites use cookies to let us retrieve the user’s details
+            for each visit. Cookies are used by our website to enable the functionality of certain areas to make it
+            easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>
         <h5 class="h5">Limitation of liability</h5>
-        <p class="light-text justified-text">Unless otherwise stated, BREL and/or its licensors own the intellectual property rights for all material on BREL. All intellectual property rights are reserved. You may access this from BREL for your own personal use subjected to restrictions set in these terms and conditions.</p>
-        <p class="light-text justified-text">Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. BREL does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of BREL,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, BREL shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.</p>
+        <p class="light-text justified-text">Unless otherwise stated, BREL and/or its licensors own the intellectual
+            property rights for all material on BREL. All intellectual property rights are reserved. You may access this
+            from BREL for your own personal use subjected to restrictions set in these terms and conditions.</p>
+        <p class="light-text justified-text">Parts of this website offer an opportunity for users to post and exchange
+            opinions and information in certain areas of the website. BREL does not filter, edit, publish or review
+            Comments prior to their presence on the website. Comments do not reflect the views and opinions of BREL,its
+            agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and
+            opinions. To the extent permitted by applicable laws, BREL shall not be liable for the Comments or for any
+            liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or
+            appearance of the Comments on this website.</p>
         <h5 class="h5">Disclaimer</h5>
-        <p class="light-text justified-text">To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website.</p>
-     </div>
+        <p class="light-text justified-text">To the maximum extent permitted by applicable law, we exclude all
+            representations, warranties and conditions relating to our website and the use of this website.</p>
+    </div>
 
 
     <!-- FOOTER -->

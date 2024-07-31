@@ -5,7 +5,7 @@
 // This script makes sure that the user has ticked the Terms of Service checkbox before submitting the form
 
 document.getElementById("gridCheck").addEventListener('change', function () {
-    var submitButton = document.getElementById("submitButton");
+    var submitButton = document.getElementById("submitButtonContactUs");
     submitButton.disabled = !this.checked;
 });
 

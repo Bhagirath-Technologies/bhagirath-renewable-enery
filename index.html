@@ -100,13 +100,6 @@
     <!-- NAVBAR 2 -->
     <nav class="navbar navbar-2 navbar-expand-lg p-0">
         <div class="container-fluid container-fluid-2">
-            <!-- <button class="btn get-brochure-btn get-brochure-btn-1 p-3">
-                Get Brochure
-            </button> -->
-            <!-- <button class="btn get-brochure-btn get-brochure-btn-1 p-3"
-                onclick="window.open('https://brelindia.com/assets/img/bg-images/home/Brouchers/BREL%20Brochure.pdf', '_blank')">
-                Get Brochure
-            </button> -->
             <button class="btn get-a-quote-btn get-a-quote-btn-1 p-2" data-bs-toggle="modal"
                 data-bs-target="#quoteModal">
                 Get a Quote
@@ -172,13 +165,6 @@
                     </ul>
                 </div>
             </div>
-            <!-- <button class="btn get-brochure-btn get-brochure-btn-2 p-3">
-                Get Brochure
-            </button> -->
-            <!-- <button class="btn get-brochure-btn get-brochure-btn-2 p-3"
-                onclick="window.open('https://brelindia.com/assets/img/bg-images/home/Brouchers/BREL%20Brochure.pdf', '_blank')">
-                Get Brochure
-            </button> -->
 
             <button class="btn get-a-quote-btn get-a-quote-btn-2 p-2" data-bs-toggle="modal"
                 data-bs-target="#quoteModal">
@@ -194,22 +180,19 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <!-- <form class="custom-form-2 row g-3"> -->
-                            <form form id="contactFormModal"
-                                action="https://formsubmit.co/fec11824174ba3db28527c47f54a5991" method="POST"
-                                class="custom-form-2 row g-3">
+                            <form id="contactFormModal" class="custom-form-2 row g-3">
                                 <div class="col-md-6">
                                     <label for="inputName" class="form-label">Full Name <span
                                             class="required-asterisk">*</span></label>
-                                    <input type="text" name="Name" class="form-control" id="inputName"
-                                        placeholder="Full name" required>
+                                    <input type="text" name="name" class="form-control" id="inputName"
+                                        placeholder="Full Name" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputNumber" class="form-label">Phone Number <span
                                             class="required-asterisk">*</span></label>
                                     <div class="input-group">
-                                        <input type="number" name="Number" class="form-control no-spinner"
-                                            id="inputNumber" placeholder="Phone number" inputmode="numeric" required>
+                                        <input type="number" name="phone" class="form-control no-spinner"
+                                            id="inputNumber" placeholder="Phone Number" inputmode="numeric" required>
                                         <span class="input-group-text">
                                             <img src="./assets/img/home page images/indian-flag.webp" alt="Indian Flag"
                                                 class="flag-icon">
@@ -217,15 +200,15 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <label for="inputEmail4" class="form-label">Email Address <span
+                                    <label for="inputEmail" class="form-label">Email Address <span
                                             class="required-asterisk">*</span></label>
-                                    <input type="email" name="Email" class="form-control" id="inputEmail4"
-                                        placeholder="Email address" required>
+                                    <input type="email" name="email" class="form-control" id="inputEmail"
+                                        placeholder="Email Address" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for="inputState" class="form-label">State <span
                                             class="required-asterisk">*</span></label>
-                                    <select id="inputState" name="State" class="form-select" required>
+                                    <select id="inputState" name="state" class="form-select" required>
                                         <option value="" selected disabled>Choose...</option>
                                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                                         <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -270,7 +253,7 @@
                                 <div class="col-md-12">
                                     <label for="inputHomeCommercial" class="form-label">Solar For Home or Commercial?
                                         <span class="required-asterisk">*</span></label>
-                                    <select id="inputHomeCommercial" name="Home-or-Commercial" class="form-select"
+                                    <select id="inputHomeCommercial" name="homeOrCommercial" class="form-select"
                                         required>
                                         <option value="" selected disabled>Choose...</option>
                                         <option value="Individual House or Villa">Individual House or Villa</option>
@@ -281,8 +264,8 @@
                                 <div class="col-md-12">
                                     <label for="inputStateBill" class="form-label">Monthly Average Electricity Bill
                                         <span class="required-asterisk">*</span></label>
-                                    <select id="inputStateBill" name="Monthly-Average-Electricity-Bill"
-                                        class="form-select" required>
+                                    <select id="inputStateBill" name="monthlyAverageElectricityBill" class="form-select"
+                                        required>
                                         <option value="" selected disabled>Choose...</option>
                                         <option value="Less than ₹1000">Less than ₹1000</option>
                                         <option value="₹1000 to ₹2000">₹1000 to ₹2000</option>
@@ -290,28 +273,16 @@
                                         <option value="More Than ₹5000">More Than ₹5000</option>
                                     </select>
                                 </div>
-                                <!-- <div class="col-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheckModal">
-                                        <label class="form-check-label colored-link" for="gridCheckModal">
-                                            I agree with BREL's <a href="#" class="colored-heading">Terms of Service</a>
-                                        </label>
-                                    </div>
-                                </div> -->
-                                <input type="hidden" name="_next"
-                                    value="https://shayaankn.github.io/brel-website/thanks.html">
+                                <input type="hidden" name="formType" value="Get a Quote">
                                 <div class="col-12">
-                                    <!-- <button type="submit" class="btn btn-primary form-submit-btn-2 mt-2"
-                                        id="submitButtonModal" disabled>Submit</button> -->
-                                    <button type="submit" class="btn btn-primary form-submit-btn-2 mt-2"
-                                        id="submitButtonModal">Submit</button>
+                                    <input type="submit" id="submitButtonGetQuote"
+                                        class="btn btn-primary form-submit-btn-2 mt-2">
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-
 
         </div>
     </nav>
@@ -839,8 +810,9 @@
                         </label>
                     </div>
                 </div>
+                <input type="hidden" name="formType" value="Contact Us (Home Page)">
                 <div class="col-12">
-                    <input type="submit" id="submitButton" class="btn btn-primary form-submit-btn" disabled>
+                    <input type="submit" id="submitButtonContactUs" class="btn btn-primary form-submit-btn" disabled>
                 </div>
             </form>
         </div>
@@ -973,25 +945,6 @@
             </div>
         </div>
     </div>
-
-    <!-- <div class="extra-info">
-        <div class="row no-gutters pt-5 pb-5">
-            <div class="col-md-6 extra-info-div p-4">
-                <h4 class="extra-info-heading-1 text-animation h4">| Our Work</h4>
-                <h2 class="extra-info-heading-2 text-animation h2">Innovators in Energy Solutions</h2>
-                <p class="extra-info-paragraph">Solar power is a transformative technology that harnesses the abundant
-                    energy of the sun to generate electricity cleanly and sustainably. By capturing sunlight through
-                    photovoltaic panels or concentrating solar power systems, solar energy offers a renewable
-                    alternative to fossil fuels, mitigating greenhouse gas emissions and combating climate change.</p>
-                <button class="extra-info-button">EXPLORE NOW</button>
-            </div>
-            <div class="col-md-6 extra-info-div">
-                <div class="extra-info-img">
-                    <img src="./assets/img/home page images/our-work-img.webp" alt="Image 5">
-                </div>
-            </div>
-        </div>
-    </div> -->
 
     <!-- FAQs -->
     <div class="container pt-5 pt-xxl-7 d-flex flex-column align-items-center">

@@ -95,12 +95,13 @@ document.addEventListener('DOMContentLoaded', function () {
 //-----------FORM SUBMIT (Google Apps Script)-----------
 //======================================================
 
-// let form = document.querySelector("form");
-let form = document.getElementById("contactForm");
-form.addEventListener('submit', (e) => {
+// Contact Us form
+let formContactUs = document.getElementById("contactForm");
+formContactUs.addEventListener('submit', (e) => {
     e.preventDefault();
-    document.querySelector("#submitButton").value = "Submitting...";
-    let data = new FormData(form);
+    document.querySelector("#submitButtonContactUs").value = "Submitting...";
+    let data = new FormData(formContactUs);
+    data.append('formType', 'Contact Us'); // Add formType to identify the form
     fetch('https://script.google.com/macros/s/AKfycbxK5g8EB97DlY8ZzSbNA_9J-HRADXS-nR6jnwL38Xiiwq9VnqnasZ0epMN6U8hPcacI7Q/exec', {
         method: "POST",
         body: data,
@@ -108,9 +109,28 @@ form.addEventListener('submit', (e) => {
         .then(res => res.text())
         .then(data => {
             // document.querySelector("#message-top").innerHTML = data; // It will show success
-            document.querySelector("#submitButton").value = "Submit";
+            document.querySelector("#submitButtonContactUs").value = "Submit";
             if (data.includes('Success')) { // Adjust this condition if needed
                 window.location.href = '../thanks.html'; // Redirect to thank-you.html
+            }
+        })
+})
+// Get a Quote form
+let formGetQuote = document.getElementById("contactFormModal");
+formGetQuote.addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.querySelector("#submitButtonGetQuote").value = "Submitting...";
+    let data = new FormData(formGetQuote);
+    data.append('formType', 'Get a Quote'); // Add formType to identify the form
+    fetch('https://script.google.com/macros/s/AKfycbxK5g8EB97DlY8ZzSbNA_9J-HRADXS-nR6jnwL38Xiiwq9VnqnasZ0epMN6U8hPcacI7Q/exec', {
+        method: "POST",
+        body: data,
+    })
+        .then(res => res.text())
+        .then(data => {
+            document.querySelector("#submitButtonGetQuote").value = "Submit";
+            if (data.includes('Success')) {
+                window.location.href = '../thanks.html';
             }
         })
 })
