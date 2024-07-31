@@ -95,34 +95,22 @@ document.addEventListener('DOMContentLoaded', function () {
 //-----------FORM SUBMIT (Google Apps Script)-----------
 //======================================================
 
-async function submitForm(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    const formData = new FormData(document.getElementById('contactForm'));
-    const formObject = Object.fromEntries(formData.entries());
-
-    try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbz1-HIWjyAWUwRbqosOzBcbM7SkXrxgGMCbOx3wHTIMKFDpEC4iAdyc5jIzZ0vm7vU1/exec', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formObject),
-            mode: 'cors', // Enable CORS
-            credentials: 'same-origin' // Include credentials if needed
-        });
-
-        if (response.ok) {
-            alert('Form submitted successfully!');
-            document.getElementById('contactForm').reset(); // Optionally reset the form
-        } else {
-            // Log response details for debugging
-            const responseText = await response.text();
-            console.error('Error response:', responseText);
-            alert('There was an error submitting the form. Check the console for details.');
-        }
-    } catch (error) {
-        console.error('Fetch error:', error);
-        alert('There was an error submitting the form.');
-    }
-}
+// let form = document.querySelector("form");
+let form = document.getElementById("contactForm");
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.querySelector("#submitButton").value = "Submitting...";
+    let data = new FormData(form);
+    fetch('https://script.google.com/macros/s/AKfycbxK5g8EB97DlY8ZzSbNA_9J-HRADXS-nR6jnwL38Xiiwq9VnqnasZ0epMN6U8hPcacI7Q/exec', {
+        method: "POST",
+        body: data,
+    })
+        .then(res => res.text())
+        .then(data => {
+            // document.querySelector("#message-top").innerHTML = data; // It will show success
+            document.querySelector("#submitButton").value = "Submit";
+            if (data.includes('Success')) { // Adjust this condition if needed
+                window.location.href = '../thanks.html'; // Redirect to thank-you.html
+            }
+        })
+})
