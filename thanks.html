@@ -395,6 +395,28 @@
     <!-- Swiper Script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- Get a Quote Form Script -->
+    <script>
+        let formGetQuote = document.getElementById("contactFormModal");
+        formGetQuote.addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.querySelector("#submitButtonGetQuote").value = "Submitting...";
+            let data = new FormData(formGetQuote);
+            data.append('formType', 'Get a Quote'); // Add formType to identify the form
+            fetch('https://script.google.com/macros/s/AKfycbxK5g8EB97DlY8ZzSbNA_9J-HRADXS-nR6jnwL38Xiiwq9VnqnasZ0epMN6U8hPcacI7Q/exec', {
+                method: "POST",
+                body: data,
+            })
+                .then(res => res.text())
+                .then(data => {
+                    document.querySelector("#submitButtonGetQuote").value = "Submit";
+                    if (data.includes('Success')) {
+                        window.location.href = '../thanks.html';
+                    }
+                })
+        })
+    </script>
+
 </body>
 
 </html>
