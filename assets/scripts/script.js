@@ -115,6 +115,9 @@ formContactUs.addEventListener('submit', (e) => {
             }
         })
 })
+
+// This code is not working from script.js, therefore I added this individually on each HTML page in a <script> tag.
+
 // Get a Quote form
 // let formGetQuote = document.getElementById("contactFormModal");
 // formGetQuote.addEventListener('submit', (e) => {
