@@ -106,13 +106,21 @@ formContactUs.addEventListener('submit', (e) => {
         method: "POST",
         body: data,
     })
+
+        // .then(res => res.text())
+        // .then(data => {
+        //     // document.querySelector("#message-top").innerHTML = data; // It will show success
+        //     document.querySelector("#submitButtonContactUs").value = "Submit";
+        //     if (data.includes('Success')) { // Adjust this condition if needed
+        //         window.location.href = '../thanks.html'; // Redirect to thanks.html
+        //     }
+        // })
+
         .then(res => res.text())
         .then(data => {
-            // document.querySelector("#message-top").innerHTML = data; // It will show success
-            document.querySelector("#submitButtonContactUs").value = "Submit";
-            if (data.includes('Success')) { // Adjust this condition if needed
-                window.location.href = '../thanks.html'; // Redirect to thanks.html
-            }
+            document.querySelector("#submitButtonContactUs").value = "Your form has been submitted";
+            document.querySelector("#submitButtonContactUs").disabled = true;
+            document.querySelector(".form-check-input").disabled = true;
         })
 })
 
