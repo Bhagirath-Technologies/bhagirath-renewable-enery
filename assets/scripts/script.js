@@ -95,7 +95,8 @@ document.addEventListener('DOMContentLoaded', function () {
 //-----------FORM SUBMIT (Google Apps Script)-----------
 //======================================================
 
-// Contact Us form
+// This script is for "Contact Us" form (in Home page and Contact Us page)
+// This script is NOT for "Get a Quote" form
 let formContactUs = document.getElementById("contactForm");
 formContactUs.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -106,16 +107,6 @@ formContactUs.addEventListener('submit', (e) => {
         method: "POST",
         body: data,
     })
-
-        // .then(res => res.text())
-        // .then(data => {
-        //     // document.querySelector("#message-top").innerHTML = data; // It will show success
-        //     document.querySelector("#submitButtonContactUs").value = "Submit";
-        //     if (data.includes('Success')) { // Adjust this condition if needed
-        //         window.location.href = '../thanks.html'; // Redirect to thanks.html
-        //     }
-        // })
-
         .then(res => res.text())
         .then(data => {
             document.querySelector("#submitButtonContactUs").value = "Your form has been submitted";
@@ -123,25 +114,3 @@ formContactUs.addEventListener('submit', (e) => {
             document.querySelector(".form-check-input").disabled = true;
         })
 })
-
-// This code is not working from script.js, therefore I added this individually on each HTML page in a <script> tag.
-
-// Get a Quote form
-// let formGetQuote = document.getElementById("contactFormModal");
-// formGetQuote.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     document.querySelector("#submitButtonGetQuote").value = "Submitting...";
-//     let data = new FormData(formGetQuote);
-//     data.append('formType', 'Get a Quote'); // Add formType to identify the form
-//     fetch('https://script.google.com/macros/s/AKfycbxK5g8EB97DlY8ZzSbNA_9J-HRADXS-nR6jnwL38Xiiwq9VnqnasZ0epMN6U8hPcacI7Q/exec', {
-//         method: "POST",
-//         body: data,
-//     })
-//         .then(res => res.text())
-//         .then(data => {
-//             document.querySelector("#submitButtonGetQuote").value = "Submit";
-//             if (data.includes('Success')) {
-//                 window.location.href = '../thanks.html';
-//             }
-//         })
-// })
